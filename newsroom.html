@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MediTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;800&display=swap" rel="stylesheet">
+    <!--  FONTS: SPARTAN (400,800)  -->
+    <link rel="stylesheet" id="dtstyles" href="styles/mainstyles.css" />
+    <link rel="stylesheet" id="mobstyles" href="styles/mobilestyles.css" />
+    <link rel='icon' href='resources/images/MTS.ico' type='image/x-icon' />
+    <meta name="viewport" content="width=device-width, height=device-height">
+</head>
+
+<body>
+    <div class="header" id="header">
+        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
+        <img class="news" src="resources/images/news.png" alt="newsroom" onclick="window.location.href = 'newsroom.html';">
+        <img class="logo" src="resources/images/MTS.png" alt="logo" onclick="window.location.href = 'index.html';">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </div>
+    <h1 class="heading"><mark>Newsroom</mark></h1>
+    <p class="subtext">Want to learn more about what we do here? Well, you've come to the right place!</p>
+    <button class="collapsible">February 10th, 2021</button>
+    <div class="content">
+        <p>Today, we unveil the beta channel to our VR communications. This will unlock what is definitley the future of medical communications, and we want you to help. <a href="products.html">Contact us</a> to get more information and opt in.</p>
+    </div>
+    <button class="collapsible">January 27th, 2021</button>
+    <div class="content">
+        <p>Exited to announce that we are getting our first customers and that we have been selected to compete in the Local Best Medical Package Contest!</p>
+    </div>
+    <button class="collapsible">December 18th, 2020</button>
+    <div class="content">
+        <p>After months of waiting and closed-door beta testing, we are finally ready to announce our first solutions package that will be available to the public! It's called the Meditech Package! To find out more, click <a href="products.html">here</a>.</p>
+    </div>
+    <button class="collapsible">August 5th, 2019</button>
+    <div class="content">
+        <p>Hello, world! We here at MediTech are planning something big. Check back here often for updates!</p>
+    </div>
+
+    <script src="js/mobController.js"></script>
+    <script src="js/collapsibleController.js"></script>
+</body>
+
+
+
+</html>
+
+<!--SFHS TSA 2020-->

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MediTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;800&display=swap" rel="stylesheet">
+    <!--  FONTS: SPARTAN (400,800)  -->
+    <link rel="stylesheet" id="dtstyles" href="styles/mainstyles.css" />
+    <link rel="stylesheet" id="mobstyles" href="styles/mobilestyles.css" />
+    <link rel='icon' href='resources/images/MTS.ico' type='image/x-icon' />
+    <meta name="viewport" content="width=device-width, height=device-height">
+</head>
+
+<body>
+    <div class="header" id="header">
+        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
+        <img class="news" src="resources/images/news.png" alt="newsroom" onclick="window.location.href = 'newsroom.html';">
+        <img class="logo" src="resources/images/MTS.png" alt="logo" onclick="window.location.href = 'index.html';">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+
+    </div>
+    <div class="mapcontainer">
+        <p class="iframeHeader">Find Us!</p>
+        <iframe class="map" src="map.html" title="Map"></iframe>
+    </div>
+    <div class="formcontainer">
+        <iframe class="form" src="https://form.jotform.com/210727178447158" title="Contact Form"></iframe>
+    </div>
+    <script src="js/loadelements.js"></script>
+    <script src="js/mobController.js"></script>
+</body>
+
+</html>
