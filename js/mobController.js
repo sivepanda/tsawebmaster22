@@ -1,21 +1,26 @@
 var height = window.screen.height;
 var width = window.screen.width;
 var isOpen = false;
+var dtstyles = 'styles/mainstyles.css';
+var mobstyles = 'styles/mobilestyles.css';
+var styles = document.createElement('link');
+
+styles.setAttribute('rel', 'stylesheet');
 
 console.log(width / height);
 
 if (width > height) {
-    document.getElementById('dtstyles').disabled = false;
-    document.getElementById('mobstyles').disabled = true;
+    styles.setAttribute('href', dtstyles);
     document.getElementById("hambgrmenu").style.display = 'none';
 } else {
-    document.getElementById('mobstyles').disabled = false;
-    document.getElementById('dtstyles').disabled = true;
+    styles.setAttribute('href', mobstyles);
     document.getElementById("hambgrmenu").style.display = 'block';
-    document.getElementById('vid').remove();
-    document.getElementById('dtstyles').remove();
+    // document.getElementById('vid').remove();
+    // document.getElementById('dtstyles').remove();
 
 }
+
+document.head.appendChild(styles);
 
 function openMenu() {
     if (isOpen) {
