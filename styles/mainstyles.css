@@ -15,7 +15,7 @@ body {
     height: 14vh;
     /* position: relative; */
     display: grid;
-    grid-template-columns: 20vw 5vw 75vw;
+    grid-template-columns: 20vw 75vw 5vw;
     grid-template-rows: none;
     align-items: center;
 }
@@ -27,24 +27,11 @@ body {
     grid-row: 1;
 }
 
-.header .news {
+.header .supp {
     width: 2.5vw;
     grid-column: 3;
     grid-row: 1;
     align-self: center;
-    transition: all ease-in-out 150ms;
-}
-
-.header .supp {
-    width: 2.5vw;
-    grid-column: 2;
-    grid-row: 1;
-    align-self: center;
-    transition: all ease-in-out 150ms;
-}
-
-.header .news:hover {
-    opacity: 0.5;
     transition: all ease-in-out 150ms;
 }
 
@@ -55,9 +42,10 @@ body {
 
 .header ul {
     list-style: none;
-    grid-column: 3;
+    text-align: center;
+    grid-column: 2;
     grid-row: 1;
-    margin-left: 0vw;
+    margin-left: -15vw;
     padding: 0vw;
 }
 
@@ -115,7 +103,7 @@ body {
 .subheader ul li p {
     display: inline;
     position: center;
-    color: cornflowerblue;
+    color: rgb(0, 168, 22);
     transition: all ease-in-out 150ms;
     text-decoration: none;
     font-size: 4vh;
@@ -127,7 +115,7 @@ body {
 }
 
 .subheader ul li a {
-    color: cornflowerblue;
+    background-color: rgb(0, 168, 22);
     transition: all ease-in-out 150ms;
     text-decoration: none;
     font-size: 2.5vh;
@@ -135,12 +123,11 @@ body {
 }
 
 .subheader ul li a:hover {
-    color: royalblue;
+    color: rgb(10, 90, 17);
     transition: all ease-in-out 150ms;
 }
 
 .contentbox {
-    height: 70vh;
     margin-top: 0vh;
 }
 
@@ -148,11 +135,23 @@ body {
     font-family: 'Michroma', sans-serif;
     font-size: 10vh;
     color: rgba(0, 0, 0, 0);
-    font-weight: bold;
-    -webkit-text-stroke: 3px white;
+    font-weight: 100;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    padding-top: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
     position: relative;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
+.contentbox h2 {
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-size: 10vh;
+    padding-left: 2vw;
+    text-align: center;
+    transition: ease-in-out 400ms;
 }
 
 .contentbox p {
@@ -163,7 +162,24 @@ body {
     padding-right: 5vw;
 }
 
+.contentbox .biglinkleft {
+    grid-column: 1;
+    grid-row: 1;
+    transition: ease-in-out 400ms;
+}
+
+.contentbox .biglinkright {
+    grid-column: 2;
+    grid-row: 1;
+    transition: ease-in-out 400ms;
+}
+
+.contentbox .biglinkright:hover {
+    transition: ease-in-out 400ms;
+}
+
 #ic1 {
+    height: 70vh;
     background-image: url("../resources/images/audience-g92176bc73_1920.jpg");
     background-size: cover;
     background-position: center;
@@ -173,10 +189,27 @@ body {
 }
 
 #ac1 {
+    height: 70vh;
     background-image: url("../resources/images/pexels-belle-co-1000444.jpg");
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0);
+}
+
+#ac2 {
+    height: 40vh;
+    background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0);
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+}
+
+#ac2:hover {
+    filter: grayscale(100%);
+    /* opacity: 0.8; */
+    transition: ease-in-out 400ms;
 }
 
 .medialeft {
@@ -224,10 +257,6 @@ body {
     margin-left: 15vw;
 }
 
-mark {
-    background-color: blanchedalmond;
-}
-
 .mediaright {
     margin-top: 15vh;
     margin-bottom: 15vh;
@@ -269,9 +298,12 @@ mark {
 }
 
 .collapsible {
-    background-color: #dbdbdb;
-    font-family: 'Spartan', sans-serif;
-    color: cornflowerblue;
+    background-color: #313131;
+    font-family: 'Michroma', sans-serif;
+    font-size: 8vh;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
     cursor: pointer;
     padding: 20px;
     width: 100%;
@@ -284,7 +316,7 @@ mark {
 
 .active,
 .collapsible:hover {
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(71, 71, 71);
     transition: all ease-in-out 200ms;
 }
 
@@ -307,7 +339,8 @@ mark {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #ebebeb;
+    background-color: rgb(41, 41, 41);
+    color: azure;
 }
 
 .heading {
@@ -318,6 +351,7 @@ mark {
     -webkit-text-stroke: 3px white;
     padding-left: 2vw;
     padding-right: 2vw;
+    margin-bottom: 0vh;
     position: relative;
 }
 
@@ -399,10 +433,25 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    text-transform: uppercase;
+    font-family: 'Michroma', sans-serif;
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 2px;
+}
+
+h3 {
+    font-weight: 300;
+    color: white;
+    font-size: 4vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    margin-top: 0vh;
+}
+
 .headimg {
     width: 50vw;
     margin-left: 5vw;
 }
-
-
-/* SFHS TSA 2020*/
+/* SFHS TSA 2021*/

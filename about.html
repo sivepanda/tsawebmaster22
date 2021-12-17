@@ -2,16 +2,51 @@
 <html>
 
 <head>
-    <!-- <title>MediTech</title> -->
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, height=device-height">
+    <style>
+        .loadtank {
+            position: fixed;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: black;
+            transition: ease-in-out 100ms;
+            text-align: center;
+            z-index: 99;
+            padding-bottom: 20vw;
+        }
+        
+        .loader {
+            border: 2vw solid rgb(0, 168, 22);
+            border-top: 2vw solid rgb(10, 90, 17);
+            border-radius: 50%;
+            width: 10vw;
+            height: 10vw;
+            margin-top: 30vh;
+            margin-left: 44vw;
+            animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="loadtank" id="loadtank">
+        <div class="loader"></div>
+    </div>
     <div class="header" id="header">
         <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
-        <img class="news" src="resources/images/news.png" alt="newsroom" onclick="window.location.href = 'newsroom.html';">
         <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -22,7 +57,6 @@
     </div>
     </div>
     <div class="contentbox" id="ac1">
-        <div class="cbimg" id="ac1img"></div>
         <h1>WHO ARE WE?</h1>
         <p>In 2020 the number of fans in attendance in concerts, sports games, and other venues dropped dramatically due to the COVID-19 pandemic. Our mission at (insert website name here) is to fire up the thrill of going to such places, specifically concerts
             or music related events. The truth is that the love for music never died, in fact, it increased over the past year and now as we move back into being a normal functioning society again, people need to feel the excitement of making memories
@@ -30,9 +64,18 @@
             in their concert giving a truly unique experience to the viewer. Welcome to the event of the future.
             <p>
     </div>
+    <div class="contentbox" id="ac2">
+        <div class="biglinkleft" onclick="window.location.href = 'newsroom.html';">
+            <h2>Newsroom</h2>
+        </div>
+        <div class="biglinkright" onclick="window.location.href = 'faq.html';">
+            <h2>FAQ</h2>
+        </div>
+    </div>
 
 
     <script src="js/loadelements.js"></script>
+    <script src="js/hover.js"></script>
     <script src="js/mobController.js"></script>
     <script src="js/parallax.js"></script>
 </body>
