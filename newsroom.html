@@ -3,39 +3,91 @@
 
 <head>
     <meta name="viewport" content="width=device-width, height=device-height">
+    <style>
+        .loadtank {
+            position: fixed;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: black;
+            transition: ease-in-out 100ms;
+            text-align: center;
+            z-index: 99;
+            padding-bottom: 20vw;
+        }
+        
+        .loader {
+            border: 2vw solid rgb(0, 168, 22);
+            border-top: 2vw solid rgb(10, 90, 17);
+            border-radius: 50%;
+            width: 10vw;
+            height: 10vw;
+            margin-top: 30vh;
+            margin-left: 44vw;
+            animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
+        }
+
+        body{
+            min-height: 100vh;
+            display:grid;
+            place-items: center;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .glitch {
+            font-size: 6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            text-shadow:
+                0.05em 0 0 rgba(255, 0,0,.75),
+                -0.025em -.005em 0 rgba(0, 255,0,.75),
+                0.025em .005em 0 rgba(0, 255,0,.75);
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
+    
     <div class="header" id="header">
         <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
-        <img class="news" src="resources/images/news.png" alt="newsroom" onclick="window.location.href = 'newsroom.html';">
         <img class="logo" onclick="window.location.href = 'index.html';">
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="newsroom.html">NEWS</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
     </div>
+    <p class="glitch">Newsroom</p>
     <h1 class="heading">Newsroom</h1>
-    <p class="subtext">Want to learn more about what we do here? Well, you've come to the right place!</p>
-    <button class="collapsible">February 10th, 2021</button>
+    <h3>Want to learn more about what we do here? Well, you've come to the right place!</h3>
+    <button class="collapsible">December 27th, 2017</button>
     <div class="content">
-        <p>Today, we unveil the beta channel to our VR communications. This will unlock what is definitley the future of medical communications, and we want you to help. <a href="products.html">Contact us</a> to get more information and opt in.</p>
+        <p>The wait is over. We proudly unveil our new
+        </p>
     </div>
-    <button class="collapsible">January 27th, 2021</button>
+    <button class="collapsible">December 7th, 2017</button>
     <div class="content">
-        <p>Exited to announce that we are getting our first customers and that we have been selected to compete in the Local Best Medical Package Contest!</p>
+        <p>We are grateful for our partnership with ADO Technologies providing us the opportunity to use their acoustic chamber to test our new audio codecs. What for? You'll just have to wait and see.
+        </p>
     </div>
-    <button class="collapsible">December 18th, 2020</button>
+    <button class="collapsible">August 5th, 2016</button>
     <div class="content">
-        <p>After months of waiting and closed-door beta testing, we are finally ready to announce our first solutions package that will be available to the public! It's called the Meditech Package! To find out more, click <a href="products.html">here</a>.</p>
-    </div>
-    <button class="collapsible">August 5th, 2019</button>
-    <div class="content">
-        <p>Hello, world! We here at MediTech are planning something big. Check back here often for updates!</p>
+        <p>Something big is coming. A new world awaits.</p>
     </div>
 
     <script src="js/mobController.js"></script>
@@ -44,7 +96,6 @@
 </body>
 
 
-
 </html>
 
-<!--SFHS TSA 2020-->
+<!--SFHS TSA 2021-->

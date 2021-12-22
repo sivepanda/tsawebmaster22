@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <style>
+        .loadtank {
+            position: fixed;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: black;
+            transition: ease-in-out 100ms;
+            text-align: center;
+            z-index: 99;
+            padding-bottom: 20vw;
+        }
+        
+        .loader {
+            border: 2vw solid rgb(0, 168, 22);
+            border-top: 2vw solid rgb(10, 90, 17);
+            border-radius: 50%;
+            width: 10vw;
+            height: 10vw;
+            margin-top: 30vh;
+            margin-left: 44vw;
+            animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loadtank" id="loadtank">
+        <div class="loader"></div>
+    </div>
+    <div class="header" id="header">
+        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
+        <img class="logo" onclick="window.location.href = 'index.html';">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </div>
+
+    <div class="contentbox" id="ec2">
+        <h1>The Artists</h1>
+        <!--I will be working on a better animation/dropdown for this. What is here currently is just to placehold-->
+        <h3 class="title">Bassthoven</h3>
+        <p class="description">A 54 year-old Korean artist who goes by the name of Bassthoven. His music is quite distinct from other electronica artists as it connects the old classical theme with the more recent ambient electronic music of today. Although an avid supporter
+            of the revival of classical music, he was introduced to electronica through his son the summer he lost his woodworking job due to the pandemic. His first album was released 2 weeks ago and his first major concert will be with us!
+        </p><br>
+        <h3 class="title">DROOLE</h3>
+        <p class="description">A very private individual, DROOLE’s name, age and other info has been kept secret to the public. It is, however, speculated that they hail from the Netherlands. Their style focuses more on a strict 2013 dubstep (with elements of the more modern
+            wave genre) sound with little to no lyrics as he deems them “unnecessary” to making a good song. Debuting in 2014, he has featured in several video games and sci-fi films. Rarely releasing music, this will be a performance of their third,
+            and most recent, album, Only Through My Eyes - released just last year. </p><br>
+        <h3 class="title">S’more</h3>
+        <p class="description">A fan of Marshmallows (and a certain artist with that very name), S’more focuses on features from other artists and lyrics in her music along with the beats she produces. Unlike her idol, however, she shows her identity and shares personal experiences
+            quite frequently such as those that made her pursue this genre. She has charted #1 on charts several times as well as earning a Grammy, the very first Vietnamese artist to do so for the Electronic genre.</p><br>
+        <h3 class="title">Paft Drunk</h3>
+        <p class="description">Big supporters of the former duo Daft Punk, Paft Drunk burst into the scene in 2015, 5 years before Daft Punk had mysteriously left the scene without revealing anything. Paft Drunk is actually a band consisting of 5 members from France, Indonesia,
+            and Germany that met over a virtual group therapy session while suffering from a drinking problem. Since then, they have charted numerous times and, like DROOLE, will be performing their 3rd album, <i>Dwanye</i>.</p>
+    </div>
+    <div class="container">
+        <button class="btn-2" onclick="window.location.href = 'artists.html';">The Artists</button>
+    </div>
+
+
+    <script src="js/mobController.js"></script>
+    <script async src="js/listinfo.js"></script>
+    <script async src="js/loadelements.js"></script>
+    <script src="js/collapsibleController.js"></script>
+
+</body>
+
+
+
+
+<!--SFHS TSA 2020-->

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <style>
+        .loadtank {
+            position: fixed;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: black;
+            transition: ease-in-out 100ms;
+            text-align: center;
+            z-index: 99;
+            padding-bottom: 20vw;
+        }
+        
+        .loader {
+            border: 2vw solid rgb(0, 168, 22);
+            border-top: 2vw solid rgb(10, 90, 17);
+            border-radius: 50%;
+            width: 10vw;
+            height: 10vw;
+            margin-top: 30vh;
+            margin-left: 44vw;
+            animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loadtank" id="loadtank">
+        <div class="loader"></div>
+    </div>
+    <div class="header" id="header">
+        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
+
+        <img class="logo" onclick="window.location.href = 'index.html';">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </div>
+    <h1 class="heading">FAQ</h1>
+    <h3>Got any questions? Here are some we have been asked before. If none of these fit your query, feel free to use the form below or email to send a question.</h3>
+    <button class="collapsible">What will the viewing experience be like?</button>
+    <div class="content">
+        <p>As far as the display goes, it depends on the package you purchased. Generally, you will be using your own personal display. If you buy our VR package, you will be sent a VR headset of your choice. The creative process of the concert will depend
+            entirely on the artist, however. </p>
+    </div>
+    <button class="collapsible">How long before an event do the tickets become available for purchase? How will I know about this info if I want to be one of the first to buy a ticket?</button>
+    <div class="content">
+        <p>The timing of when an event goes live depends on the artist and when they decide to make the information public, however, through our catalog of artists you can select the ones you would like to be alerted about and will receive a notification
+            whenever they decide to have an event.</p>
+    </div>
+    <button class="collapsible">Global events were mentioned, how does that work?</button>
+    <div class="content">
+        <p>Through us you will be able to experience any digitized music event commissioned to us by an artist. We are truly global meaning you can watch an event from anywhere with high quality and amazing sound, using our state-of-the-art lossless streaming
+            codecs. 
+        </p>
+    </div>
+    
+    
+    <script src="js/mobController.js"></script>
+    <script async src="js/loadelements.js"></script>
+    <script src="js/collapsibleController.js"></script>
+</body>
+
+
+
+</html>
+
+<!--SFHS TSA 2020-->
