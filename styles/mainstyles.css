@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     background: rgb(14, 14, 14);
+    color: white;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 100%;
     overflow-x: hidden;
@@ -222,8 +223,12 @@ body {
 #ec2 {
     display: grid;
     grid-template-columns: 50vw 50vw;
+    background-size: cover;
+    background-position: center;
     /* height: 20vh; */
     grid-template-rows: auto repeat(4, 10vh);
+    -webkit-transition: background-image 1s ease-in-out;
+    transition: ease-in-out 400ms;
     padding-bottom: 10vh;
 }
 
@@ -385,7 +390,7 @@ body {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: rgb(41, 41, 41);
-    color: azure;
+    color: rgb(255, 255, 255);
 }
 
 .heading {
@@ -438,7 +443,7 @@ body {
 
 .formcontainer .form {
     border: none;
-    height: 60vh;
+    height: 70vh;
     width: 30vw;
     float: right;
     padding: 5vw;
@@ -491,6 +496,14 @@ h2 {
 h3 {
     text-transform: uppercase;
     font-family: 'Michroma', sans-serif;
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 2px;
+}
+
+h4 {
+    margin-top: 0vh;
+    margin-left: 2vw;
     color: rgba(0, 0, 0, 0);
     font-weight: 100;
     -webkit-text-stroke-width: 2px;
@@ -660,6 +673,122 @@ h3 {
 .button:hover {
     transition: 200ms ease-in-out;
     background-color: rgb(10, 90, 17);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animheading {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: 'Courier', monospace;
+    color: white;
+    position: relative;
+    width: max-content;
+}
+
+.animheading::before,
+.animheading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.animheading::before {
+    background: rgb(14, 14, 14);
+    animation: typewriter 3s steps(15) 1s forwards;
+}
+
+.animheading::after {
+    width: .125em;
+    background: white;
+    animation: typewriter 3s steps(15) 1s forwards, blink 1200ms steps(15) infinite;
+}
+
+.subtitle {
+    font-family: 'Michroma', sans-serif;
+    font-size: 10vh;
+    color: white;
+    /*color: white;
+    font-size: 5rem;*/
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 5s ease 6s forwards;
+}
+
+.box {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+input[type="text"] {
+    background: rgb(144, 238, 144);
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"] {
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: green;
+    color: black;
+}
+
+input[type="submit"]:hover {
+    background: lightgreen;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent
+    }
 }
 
 @keyframes spin {

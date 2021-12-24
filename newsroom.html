@@ -28,25 +28,6 @@
             margin-left: 44vw;
             animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
         }
-
-        body{
-            min-height: 100vh;
-            display:grid;
-            place-items: center;
-            color: white;
-            font-family: sans-serif;
-        }
-
-        .glitch {
-            font-size: 6rem;
-            font-weight: 700;
-            text-transform: uppercase;
-
-            text-shadow:
-                0.05em 0 0 rgba(255, 0,0,.75),
-                -0.025em -.005em 0 rgba(0, 255,0,.75),
-                0.025em .005em 0 rgba(0, 255,0,.75);
-        }
         
         @keyframes spin {
             0% {
@@ -60,7 +41,7 @@
 </head>
 
 <body>
-    
+
     <div class="header" id="header">
         <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
@@ -72,7 +53,6 @@
             <li><a href="about.html">ABOUT</a></li>
         </ul>
     </div>
-    <p class="glitch">Newsroom</p>
     <h1 class="heading">Newsroom</h1>
     <h3>Want to learn more about what we do here? Well, you've come to the right place!</h3>
     <button class="collapsible">December 27th, 2017</button>

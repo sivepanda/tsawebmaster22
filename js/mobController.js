@@ -15,6 +15,11 @@ if (width > height) {
 } else {
     styles.setAttribute('href', mobstyles);
     document.getElementById("hambgrmenu").style.display = 'block';
+    document.getElementById("loadtank").remove();
+    if (document.getElementById("ec2")) {
+        document.getElementById("ec2").remove();
+
+    }
     // document.getElementById('vid').remove();
     // document.getElementById('dtstyles').remove();
 

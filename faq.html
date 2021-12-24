@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <meta name="viewport" content="width=device-width, height=device-height">
     <style>
@@ -30,13 +29,11 @@
             animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
         }
         
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+        h1 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: white;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -58,7 +55,7 @@
         </ul>
     </div>
     <h1 class="heading">FAQ</h1>
-    <h3>Got any questions? Here are some we have been asked before. If none of these fit your query, feel free to use the form below or email to send a question.</h3>
+    <h4 class="animheading">Have Questions? We've got you.</h4>
     <button class="collapsible">What will the viewing experience be like?</button>
     <div class="content">
         <p>As far as the display goes, it depends on the package you purchased. Generally, you will be using your own personal display. If you buy our VR package, you will be sent a VR headset of your choice. The creative process of the concert will depend
@@ -72,11 +69,15 @@
     <button class="collapsible">Global events were mentioned, how does that work?</button>
     <div class="content">
         <p>Through us you will be able to experience any digitized music event commissioned to us by an artist. We are truly global meaning you can watch an event from anywhere with high quality and amazing sound, using our state-of-the-art lossless streaming
-            codecs. 
+            codecs.
         </p>
     </div>
-    
-    
+    <div class="box">
+        <form>
+            <input type="text" name="" placeholder="Enter Your Own Question">
+            <input type="submit" name="" value="Search">
+        </form>
+    </div>
     <script src="js/mobController.js"></script>
     <script async src="js/loadelements.js"></script>
     <script src="js/collapsibleController.js"></script>
