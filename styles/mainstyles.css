@@ -261,6 +261,15 @@ body {
     color: white;
 }
 
+#ec2 .title {
+    -webkit-text-stroke-color: rgb(145, 145, 145);
+}
+
+#ec2 .title:hover {
+    font-size: 6vh;
+    -webkit-text-stroke-color: white;
+}
+
 #rosterbtn {
     margin-top: 5vh;
     grid-column: 1 / span 2;
@@ -291,6 +300,10 @@ body {
     filter: grayscale(100%);
     /* opacity: 0.8; */
     transition: ease-in-out 400ms;
+}
+
+#ac2 h2 {
+    -webkit-text-stroke-color: white;
 }
 
 .collapsible {
@@ -772,13 +785,10 @@ input[type="submit"]:hover {
     transition: all 1s ease;
 }
 
-.backbtn {
-    position: absolute;
-    top: 50%;
-    left: 7.5vw;
+.glowbtn {
+    position: relative;
+    display: inline-block;
     transform: translate(-50%, -50%);
-    width: 10vw;
-    height: 6vh;
     text-align: center;
     line-height: 5.5vh;
     color: #fff;
@@ -795,11 +805,24 @@ input[type="submit"]:hover {
     z-index: 1;
 }
 
-.backbtn:hover {
+#rosterbtn {
+    width: 15vw;
+    height: 6vh;
+    margin-left: 15vw;
+}
+
+#backbtn {
+    top: 2vh;
+    left: 50vw;
+    width: 15vw;
+    height: 6vh;
+}
+
+.glowbtn:hover {
     animation: animate 8s linear infinite;
 }
 
-.backbtn:before {
+.glowbtn:before {
     content: '';
     position: absolute;
     top: -5px;
@@ -814,7 +837,7 @@ input[type="submit"]:hover {
     transition: 0.5s;
 }
 
-.backbtn:hover:before {
+.glowbtn:hover:before {
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
