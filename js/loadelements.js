@@ -32,7 +32,7 @@ loadInterval = setInterval(function() {
 }, 300);
 
 function loaded() {
-    if (isLoaded && timerComplete) {
+    if (isLoaded && timerComplete && document.getElementById("loadtank")) {
         var load = document.getElementById("loadtank");
         load.remove();
         window.clearTimeout(loadInterval);

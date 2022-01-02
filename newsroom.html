@@ -28,7 +28,6 @@
             margin-left: 44vw;
             animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
         }
-
         
         @keyframes spin {
             0% {
@@ -42,7 +41,9 @@
 </head>
 
 <body>
-
+    <div class="loadtank" id="loadtank">
+        <div class="loader"></div>
+    </div>
     <div class="header" id="header">
         <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
@@ -54,11 +55,85 @@
             <li><a href="about.html">ABOUT</a></li>
         </ul>
     </div>
-    <h1 class="heading">Newsroom</h1>
+    <h1 class="heading">NEWSROOM</h1>
     <h4 class="animheading">Learn more about us!</h4>
+
+    <button class="collapsible">July 18th, 2021</button>
+    <div class="content">
+        <p>
+            We are excited to announce that we will be hosting events every Friday, Saturday and Sunday. Alongside our usual acts, we will begin allowing DJs to submit sets that, upon acceptance, they will play at one, or many of our events!</p>
+    </div>
+
+
+    <button class="collapsible">August 15th, 2020</button>
+    <div class="content">
+        <p>
+            In partnership with our sister company, ADO Technologies, we are happy to announce our new VR streaming capabilities, available with the Pro tier of events. We will be streaming both the event and audio in a 3D space, making you feel more connected and
+            immersed in the event than ever before. Along with this, we also announce our new custom VR headset, Canary, with significantly higher performing audio and visual systems to take full advantage of Intilis Novis.</p>
+    </div>
+
+
+    <button class="collapsible">July 18th, 2021</button>
+    <div class="content">
+        <p>
+            Three new acclaimed artists have now joined our roster. <i>SAZ</i>, <i>Galaxies</i>, and <i>Dfrog</i> have joined us and will be part of future events.</p>
+    </div>
+
+
+    <button class="collapsible">March 14th, 2020</button>
+    <div class="content">
+        <p>
+            With the newfound seriousness of the pandemic, it is refreshing to see our event being one that provides a glimpse into how we can continue into the coming months of uncertainty while still keeping ourselves entertained. The success of this event seems
+            to bode well for our future, and we are excited to see what future events bring.</p>
+    </div>
+
+
+    <button class="collapsible">February 13th, 2020</button>
+    <div class="content">
+        <p>
+            We have decided to continue with our March 13th event, however, we will work to make sure our artists will be kept distanced, and our crews will not be dispatched to help the artists set up. We are still working virtually with artists to make sure that
+            they are able to set up to our standards, and to still provide an amazing show for everyone.</p>
+    </div>
+
+
+    <button class="collapsible">January 16th, 2020</button>
+    <div class="content">
+        <p>
+            COVID-19 has recently emerged, and we are taking precautions to make sure our employees are as safe as possible. Over the past two months, we have closed our East Asian, North and South American, and European offices. We continue to operate strictly necessary
+            server maintenance in-person in our African offices, and we are preparing to transition to a fully remote operated business over the next week. As we continue to monitor the COVID-19 situation, we will make a decision about the March 13th
+            event over the coming weeks.</p>
+    </div>
+
+
+    <button class="collapsible">July 16th, 2019</button>
+    <div class="content">
+        <p>
+            We have finally secured our roster for out very first event on March 13th, 2020: <i>Bassthoven</i> will be making his debut, along with the world renowned artists <i>DROOLE</i>, <i>Paft Drunk</i>, and the incredible <i>S’more</i>.</p>
+    </div>
+
+
+    <button class="collapsible">May 15th, 2018</button>
+    <div class="content">
+        <p>
+            Our end goal was never just to provide revolutionary codecs to external vendors. It was simply a piece of our greater plan. Today, we announce the first NU_WRLD festival, taking place on March 13th, 2020. Together with our new iteration of Intillis Novis,
+            we will be hosting a virtual festival like never before. We hope that you are just as excited as we are for this. Visit <a href=events.html target="_blank">Events</a> for more information and for booking.
+        </p>
+    </div>
+
+
+    <button class="collapsible">February 3rd, 2018</button>
+    <div class="content">
+        <p>
+            Our partnership with ADO is taking the next step. We proudly announce our merger with ADO, and effective June 16th, both NU_WRLD and ADO will be placed under A New World Holding, Inc. ADO will, for all intents and purposes, be functioning independently
+            from NU_WRLD, but existing partnerships will be strengthened and made more efficient. Your ADO account, information, and products will continue to function as normal.</p>
+    </div>
+
+
     <button class="collapsible">December 27th, 2017</button>
     <div class="content">
-        <p>The wait is over. We proudly unveil our new
+        <p>The wait is over. We proudly unveil our new audio codec, Intilis Novis. It is now available for beta testing by anyone interested in using it. ADO Technologies has proven to be invaluable in our development of this technology, and we are happy
+            to announce all future products from ADO will use Intillis Novis codecs.
+
         </p>
     </div>
     <button class="collapsible">December 7th, 2017</button>
@@ -71,7 +146,7 @@
         <p>Something big is coming. A new world awaits.</p>
     </div>
 
-    
+
 
     <script src="js/mobController.js"></script>
     <script async src="js/loadelements.js"></script>
@@ -81,6 +156,4 @@
 
 </html>
 
-<!--SFHS TSA 2021-->->   
-
-<!--SFHS TSA 2021-->->
+<!--SFHS TSA 2021-->

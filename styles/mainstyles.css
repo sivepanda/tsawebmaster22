@@ -268,6 +268,7 @@ body {
 #ec2 .title:hover {
     font-size: 6vh;
     -webkit-text-stroke-color: white;
+    text-shadow: 0 0 50px white, 0 0 5px rgb(0, 168, 22);
 }
 
 #rosterbtn {
@@ -293,6 +294,7 @@ body {
     background-position: center;
     background-color: rgba(0, 0, 0, 0);
     display: grid;
+    align-items: center;
     grid-template-columns: 50vw 50vw;
 }
 
@@ -375,6 +377,43 @@ body {
     padding: 0;
 }
 
+.contactcontent {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 46vh 39vh;
+    overflow: hidden;
+    align-items: center;
+}
+
+
+/* contact form */
+
+.formcontainer {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    float: right;
+    position: relative;
+    top: 0;
+}
+
+.formcontainer .iframeHeader {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+.formcontainer .form {
+    border: none;
+    height: 80vh;
+    width: 30vw;
+    float: right;
+    padding: 5vw;
+}
+
+
+/* contact map */
+
 #map {
     position: absolute;
     top: 0;
@@ -388,42 +427,111 @@ body {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
-.formcontainer {
-    float: right;
-}
-
-.formcontainer .iframeHeader {
-    color: black;
-    text-decoration: none;
-    font-size: 2.5vh;
-    text-align: center;
-}
-
-.formcontainer .form {
-    border: none;
-    height: 70vh;
-    width: 30vw;
-    float: right;
-    padding: 5vw;
-}
-
 .mapcontainer {
     float: left;
     margin-left: 10vw;
+    /* margin-top: 3vh; */
 }
 
 .mapcontainer .iframeHeader {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 2.5vh;
     text-align: center;
 }
 
 .mapcontainer .map {
+    grid-column: 2;
+    grid-row: 2;
     border: none;
-    height: 70vh;
+    height: 32vh;
     width: 30vw;
     float: left;
+}
+
+
+/* contact info box */
+
+.contactbox {
+    position: relative;
+    /* margin-top: 3vh; */
+    /* height: 43vh; */
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(10, 90, 17);
+    margin-left: 10vw;
+    width: 30vw;
+}
+
+.contactbox h3 {
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 5vh;
+    margin-top: 0;
+    margin-left: 2vw;
+    margin-bottom: 0;
+}
+
+.infobox div {
+    display: flex;
+    margin: 0;
+    margin-left: 2vw;
+    padding: 0;
+    align-items: center;
+}
+
+.infobox div span {
+    width: 40px;
+    height: 40px;
+    background: rgb(0, 168, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%
+}
+
+.infobox div p {
+    font-size: 3vh;
+    margin-left: 1em;
+    padding: 0;
+}
+
+.infobox div a {
+    margin-left: 1em;
+    font-size: 3vh;
+    color: white;
+    transition: all ease-in-out 250ms;
+    text-decoration: none;
+}
+
+.infobox div a:hover {
+    color: rgb(146, 146, 146);
+    transition: all ease-in-out 250ms;
+}
+
+.soc {
+    margin-top: 10px;
+    display: flex;
+}
+
+.soc li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.soc li a {
+    color: white;
+    transition: all ease-in-out 250ms;
+    font-size: 4vh;
+}
+
+.soc li a:hover {
+    color: rgb(146, 146, 146);
+    font-size: 4vh;
+    transition: all ease-in-out 250ms;
 }
 
 .attpara {
@@ -486,6 +594,9 @@ h4 {
     min-height: 100vh;
 }
 
+
+/* legacy button (non-glow) */
+
 .twoutbtn {
     width: 50vw;
     height: 10vh;
@@ -526,6 +637,9 @@ h4 {
     z-index: -1;
 }
 
+
+/* artist cards */
+
 .gallery {
     display: grid;
     grid-template-columns: 20vw 20vw 20vw;
@@ -553,7 +667,9 @@ h4 {
 }
 
 .card:hover {
+    transition: transform 500ms ease;
     transform: scale(1.05);
+    box-shadow: 0px 0px 50px rgb(0, 168, 22);
 }
 
 .card-content {
@@ -713,6 +829,9 @@ input[type="submit"]:hover {
     background: rgb(0, 168, 22);
 }
 
+
+/* Information cards */
+
 .cardcontainer {
     display: flex;
     justify-content: center;
@@ -720,10 +839,11 @@ input[type="submit"]:hover {
 }
 
 .card2 {
-    background: white;
+    background: #bdbdbd;
     width: 40vw;
     margin: 50px;
     height: 62vh;
+    transition: all 500ms ease-in-out;
     border-radius: 20px;
 }
 
@@ -778,12 +898,16 @@ input[type="submit"]:hover {
 }
 
 .card2:hover {
-    background-color: #d3d3d3;
+    background-color: white;
     color: white;
     cursor: pointer;
     transform: scale(1.03);
-    transition: all 1s ease;
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 0px 50px rgb(0, 168, 22);
 }
+
+
+/* button with glowing animation */
 
 .glowbtn {
     position: relative;
@@ -805,6 +929,9 @@ input[type="submit"]:hover {
     z-index: 1;
 }
 
+
+/* location specific parameters */
+
 #rosterbtn {
     width: 15vw;
     height: 6vh;
@@ -816,6 +943,14 @@ input[type="submit"]:hover {
     left: 50vw;
     width: 15vw;
     height: 6vh;
+}
+
+#bookbtn {
+    margin-left: 50%;
+    margin-top: 5vh;
+    height: 6vh;
+    font-size: 3vh;
+    line-height: 2vh;
 }
 
 .glowbtn:hover {
@@ -842,6 +977,9 @@ input[type="submit"]:hover {
     opacity: 1;
     animation: animate 8s linear infinite;
 }
+
+
+/* custom animations */
 
 @keyframes spin {
     0% {
@@ -888,6 +1026,12 @@ input[type="submit"]:hover {
         background-position: 400%;
     }
 }
+
+
+/* light green : rgb(0, 168, 22) */
+
+
+/* dark green : rgb(10, 90, 17) */
 
 
 /* SFHS TSA 2021*/
