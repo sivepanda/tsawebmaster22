@@ -842,7 +842,7 @@ input[type="submit"]:hover {
     background: #bdbdbd;
     width: 40vw;
     margin: 50px;
-    height: 62vh;
+    height: 65vh;
     transition: all 500ms ease-in-out;
     border-radius: 20px;
 }
