@@ -835,14 +835,14 @@ input[type="submit"]:hover {
 .cardcontainer {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 120px;
 }
 
 .card2 {
     background: #bdbdbd;
     width: 40vw;
     margin: 50px;
-    height: 62vh;
+    height: 50em;
     transition: all 500ms ease-in-out;
     border-radius: 20px;
 }
@@ -850,8 +850,8 @@ input[type="submit"]:hover {
 .card-image {
     background-color: aqua;
     height: 400px;
-    margin-bottom: 15px;
-    margin-top: -160px;
+    /*! margin-bottom: 15px; */
+    /*! margin-top: -160px; */
     background-size: cover;
     border-radius: 15px 15px 0 0;
 }
@@ -949,8 +949,8 @@ input[type="submit"]:hover {
     margin-left: 50%;
     margin-top: 5vh;
     height: 6vh;
-    font-size: 3vh;
-    line-height: 2vh;
+    font-size: 1.7vw;
+    line-height: 1.7vw;
 }
 
 .glowbtn:hover {
