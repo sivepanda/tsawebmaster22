@@ -42,18 +42,27 @@
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
+    <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+            <div class="bar"></div>
+        </button>
     <div class="header" id="header">
-        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
-
-        <img class="logo" onclick="window.location.href = 'index.html';">
-        <ul>
+        <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
+        <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
     </div>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html ">HOME</a>
+        <a href="events.html ">EVENTS</a>
+        <a href="contact.html ">CONTACT</a>
+        <a href="attributes.html ">ATTRIBUTES</a>
+        <a href="about.html ">ABOUT</a>
+    </nav>
     <h1 class="heading">FAQ</h1>
     <h4 class="animheading">Have Questions? We've got you.</h4>
     <button class="collapsible">What will the viewing experience be like?</button>

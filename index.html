@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="viewport" id="viewport-meta" content="width=device-width, height=device-height">
     <style>
         .loadtank {
             position: fixed;
@@ -40,44 +40,138 @@
     </style>
 </head>
 
-<body>
+<body id="indexpage">
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
+    <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <div class="bar"></div>
+    </button>
     <div class="header" id="header">
-        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
         <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
-        <ul>
+        <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
+
     </div>
-    <div class="contentbox" id="ic1">
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html ">HOME</a>
+        <a href="events.html ">EVENTS</a>
+        <a href="contact.html ">CONTACT</a>
+        <a href="attributes.html ">ATTRIBUTES</a>
+        <a href="about.html ">ABOUT</a>
+    </nav>
+    <section class="contentbox" id="ic1">
         <h1>The NU_WRLD</h1>
         <p>Welcome to the NU_WRLD_22 festival. This is a new-age digital event that caters to an increasingly globalized network of artists and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary
             augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world! No longer do you have to worry about passports, event tickets, and your health to experience a festival
             and its experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits!
         </p>
-    </div>
-
-
-    <div class="contentbox" id="ic2">
+        <a href="#ic4 "><span>Learn More</span></a>
+    </section>
+    <section class="contentbox" id="ic2">
         <h1>THE SOUND STAGE</h1>
         <p>
             The advanced sound quality achieved by our patented Initiis Novis sound system provides studio-quality sound like you've never heard before. Our state-of-the-art lossless streaming codecs provided by our Intillis Novis technologies are revolutionary,
             providing for a full and accurate sound being streamed directly to you, with no loss to rudimentary compression tactics.
         </p>
-    </div>
-    <div class="contentbox" id="ic3">
+        <div class="telemetrycardcontainer" id="1c2cc">
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>01</h2>
+                    <h3>Streaming</h3>
+                    <p>Lossless Audio
+                        <br>Peer-To-Peer Sharing
+                        <br>Wide sound stage
+                    </p>
+                </div>
+            </div>
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>02</h2>
+                    <h3>Quality</h3>
+                    <p><b>5000 kbps</b> bitrate
+                        <br>Full sound stage
+                        <br>Extensive microphone array</p>
+                </div>
+            </div>
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>03</h2>
+                    <h3>Recording</h3>
+                    <p>State-of-the-art microphone array for artists
+                        <br>Vistual positioning in a 3D space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="contentbox " id="ic3">
         <h1>THE VISUALS</h1>
         <p>
             We've revolutionized what it means to stream events. Our new VR stage allows artists to take a creative path with their music like never before. Not only is it using the most modern VR and AR systems, but, along with the Intillis Novis sound systems,
             allows you to be able to <i>feel</i> like you are at the festival, with the artist. Not only that, but the artist will be able to fully manipulate the 3D space, allowing for never-before seen visual effects to make sure that all
             of your senses are indulged by their music.
         </p>
+        <div class="telemetrycardcontainer" id="1c3cc">
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>01</h2>
+                    <h3>Streaming</h3>
+                    <p>Lossless Video
+                        <br>Peer-To-Peer Sharing
+                        <br>3D Capable
+                    </p>
+                </div>
+            </div>
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>02</h2>
+                    <h3>Quality</h3>
+                    <p>up to <b>5K</b> HDR streaming
+                        <br>up to 120fps
+                        <br>Complete camera array</p>
+                </div>
+            </div>
+            <div class="telemetrycard">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="telemetrycontent">
+                    <h2>03</h2>
+                    <h3>Recording</h3>
+                    <p>State-of-the-art camera array
+                        <br>Access to video production tools
+                        <br>Production workshops
+                        <br>HDR Capable cameras</p>
+                </div>
+            </div>
+        </div>
     </div>
     <section class="cardcontainer" id="ic4">
         <div class="card2">
@@ -86,26 +180,55 @@
             <p>NU_WRLD has a wide selection of ways you can attend events. You can opt for a more traditional 2D streaming affair while still being able to take advantage of our room-filling and revolutionary Intillis Novis video and audio codecs, or you
                 can opt for a more immersive 3D experience, allowing you to fully indulge yourself in the creative mindsets of your favorite artists. We do this at no overly inflated cost. We make sure our event prices are always accessible for every
                 price point, and that every event tier is fairly and competitively priced. We enable you to attend events for a price far more affordable than a physical festival, while still delivering a similar experience.
-                <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;">Book Now</a>
+            </p>
+            <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;">Book Now</a>
         </div>
         <div class="card2" id="artistic4">
             <div class="card-image card-2"></div>
             <h1>THE ARTISTS</h1>
             <p>With many artists bringing talent from around the globe, NU_WRLD offers a truly connecting experience, allowing artists from all over the world to connect with fans located on all corners of the globe. This allows for meaningful and valuable
                 experiences to be equally accessible to anyone with an internet connection, regardless of location. Not only that, our dedicated team of software engineers and graphics designers ensure that the full scope of an artist’s vision is realized.
-                We bring together critically acclaimed international artists who otherwise may have a difficult time expanding their reach, give them a platform and tools to expand their reach and creative vision, all to bring you an event of a lifetime.</p>
+                We bring together critically acclaimed international artists who otherwise may have a difficult time expanding their reach, give them a platform and tools to expand their reach and creative vision, all to bring you an event of a lifetime.
+            </p>
             <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;">Learn More</a>
         </div>
     </section>
-
-
-    <script async src="js/mobController.js"></script>
-    <script async src="js/loadelements.js"></script>
-    <script src="js/videocontroller.js"></script>
-    <script src="js/mobMenu.js"></script>
-
-
 </body>
+
+<script async="true " src="js/loadelements.js"></script>
+<script async src="js/mobController.js"></script>
+<script async src="js/userSettings.js"></script>
+
+
+
+</html>
+
+<!--SFHS TSA 2021-->>
+<script async src="js/mobController.js"></script>
+<script async src="js/userSettings.js"></script>
+
+
+
+</html>
+
+<!--SFHS TSA 2021-->w Condensed', sans-serif;">Learn More</a>
+</div>
+</section>
+</body>
+
+<script async="true " src="js/loadelements.js"></script>
+<script async src="js/mobController.js"></script>
+<script async src="js/userSettings.js"></script>
+
+
+
+</html>
+
+<!--SFHS TSA 2021-->>
+<script async src="js/mobController.js"></script>
+<script async src="js/userSettings.js"></script>
+
+
 
 </html>
 

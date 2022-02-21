@@ -1,8 +1,3 @@
-/* light green : rgb(0, 168, 22); */
-
-
-/* dark green : rgb(10, 90, 17) */
-
 html,
 body {
     margin: 0;
@@ -13,6 +8,102 @@ body {
     overflow-x: hidden;
     height: 100%;
     line-height: 1.6;
+    scrollbar-width: none;
+}
+
+
+/* variables */
+
+:root {
+    --indicator-color-active: hsl(104, 94%, 50%);
+    --indicator-color-deactive: hsl(0, 95%, 31%);
+    --body-color: hsl(233, 12%, 14%);
+    --container-color: hsl(233, 12%, 20%);
+    --container-color-light: hsl(233, 12%, 26%);
+    --light-green: rgb(0, 168, 22);
+    --dark-green: rgb(10, 90, 17);
+}
+
+
+/* Scroll snapping on the index page */
+
+#indexpage {
+    /* scroll-snap-type: y mandatory; */
+    overflow-y: scroll;
+    /* scroll-snap-points-y: repeat(110vh); */
+}
+
+.indnav {
+    scroll-margin-top: 3vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#ic2 {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#ic2 p {
+    background-color: #00000098;
+}
+
+#ic3 {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#ic4 {
+    scroll-snap-align: center;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+#scrollPath {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    /* background: rgb(0, 0, 0); */
+    background: rgba(0, 0, 0, 0.479);
+}
+
+#progressbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    /* height: 100%; */
+    background: linear-gradient(to top, rgb(0, 255, 0), rgb(0, 66, 0));
+    animation: gradientrush 10s linear infinite;
+}
+
+#progressbar:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 255, 0), rgb(0, 66, 0));
+    filter: blur(30px);
+}
+
+#progressbar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(0, 255, 0), rgb(0, 66, 0));
+    filter: blur(10px);
 }
 
 .header {
@@ -65,7 +156,7 @@ body {
     content: '';
     height: 0.3vh;
     position: absolute;
-    color: rgb(10, 90, 17);
+    color: var(--dark-green);
     font-weight: 400;
     bottom: 0;
     width: 0%;
@@ -75,18 +166,18 @@ body {
 .header a:hover::before {
     width: 100%;
     transition: ease 400ms;
-    background-color: rgb(0, 168, 22);
+    background-color: var(--light-green);
 }
 
 .header ul li a {
-    color: rgb(10, 90, 17);
+    color: var(--dark-green);
     transition: all cubic-bezier(.83, -0.01, .2, 1.01) 150ms;
     text-decoration: none;
     font-size: 2vw;
 }
 
 .header ul li a:hover {
-    color: rgb(0, 168, 22);
+    color: var(--light-green);
     transition: all cubic-bezier(.83, -0.01, .2, 1.01) 250ms;
 }
 
@@ -109,7 +200,7 @@ body {
 .subheader ul li p {
     display: inline;
     position: center;
-    color: rgb(0, 168, 22);
+    color: var(--light-green);
     transition: all ease-in-out 150ms;
     text-decoration: none;
     font-size: 4vh;
@@ -121,7 +212,7 @@ body {
 }
 
 .subheader ul li a {
-    background-color: rgb(0, 168, 22);
+    background-color: var(--light-green);
     transition: all ease-in-out 150ms;
     text-decoration: none;
     font-size: 2.5vh;
@@ -129,7 +220,7 @@ body {
 }
 
 .subheader ul li a:hover {
-    color: rgb(10, 90, 17);
+    color: var(--dark-green);
     transition: all ease-in-out 150ms;
 }
 
@@ -145,19 +236,22 @@ body {
     font-weight: 100;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
-    padding-top: 2vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 6vw;
+    padding-right: 3vw;
+    text-align: left;
     position: relative;
     margin-top: 0vh;
     margin-bottom: 0vh;
 }
 
+#introtext {}
+
 .contentbox h2 {
+    padding-top: 0vh;
     -webkit-text-stroke-color: rgb(255, 255, 255);
     font-size: 10vh;
-    padding-left: 2vw;
-    text-align: center;
+    padding-left: 4vw;
+    text-align: left;
     transition: ease-in-out 400ms;
 }
 
@@ -174,8 +268,9 @@ body {
     color: rgb(255, 255, 255);
     font-size: 3vh;
     font-weight: 300;
-    padding-left: 3vw;
+    padding-left: 8vw;
     padding-right: 5vw;
+    padding-top: 0vw;
 }
 
 .contentbox .biglinkleft {
@@ -215,24 +310,27 @@ body {
 }
 
 #ic1 {
-    height: 70vh;
+    /* scroll-snap-align: start center; */
+    margin-top: 0vh;
+    height: 86vh;
     background-image: url("../resources/images/audience-g92176bc73_1920.jpg");
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0);
     /* background-filter: blur(5px); */
-    /* opacity: 0.6; */
 }
 
 #ic2 {
-    height: 50vh;
+    /* scroll-snap-align: start center; */
+    height: 100vh;
     background-image: url("../resources/images/casette.jpg");
     background-size: cover;
     background-position: center;
 }
 
 #ic3 {
-    height: 50vh;
+    /* scroll-snap-align: start center; */
+    height: 100vh;
     background-image: url("../resources/images/vrspeed.jpg");
     background-size: cover;
     background-position: center;
@@ -268,7 +366,7 @@ body {
 #ec2 .title:hover {
     font-size: 6vh;
     -webkit-text-stroke-color: white;
-    text-shadow: 0 0 50px white, 0 0 5px rgb(0, 168, 22);
+    text-shadow: 0 0 50px white, 0 0 5px var(--light-green);
 }
 
 #rosterbtn {
@@ -280,7 +378,7 @@ body {
 }
 
 #ac1 {
-    height: 70vh;
+    height: 100vh;
     background-image: url("../resources/images/stage-epiclighting.jpg");
     background-size: cover;
     background-position: center;
@@ -306,6 +404,8 @@ body {
 
 #ac2 h2 {
     -webkit-text-stroke-color: white;
+    text-align: center;
+    cursor: pointer;
 }
 
 .collapsible {
@@ -458,7 +558,7 @@ body {
     /* height: 43vh; */
     grid-column: 2;
     grid-row: 1;
-    background-color: rgb(10, 90, 17);
+    background-color: var(--dark-green);
     margin-left: 10vw;
     width: 30vw;
 }
@@ -485,7 +585,7 @@ body {
 .infobox div span {
     width: 40px;
     height: 40px;
-    background: rgb(0, 168, 22);
+    background: var(--light-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -549,7 +649,6 @@ body {
 
 h1 {
     text-transform: uppercase;
-    /* text-align: center; */
 }
 
 h2 {
@@ -577,7 +676,7 @@ h4 {
 }
 
 .vl {
-    border-left: 0.1vw solid rgb(10, 90, 17);
+    border-left: 0.1vw solid var(--dark-green);
     height: 40vh;
     position: absolute;
     left: 50%;
@@ -605,7 +704,7 @@ h4 {
     font-family: 'Barlow Condensed', sans-serif;
     border-radius: 4px;
     transition: ease-out 0.3s;
-    background-color: rgb(10, 90, 17);
+    background-color: var(--dark-green);
     font-size: 5vh;
     outline: none;
     position: relative;
@@ -626,7 +725,7 @@ h4 {
     bottom: 0;
     opacity: 0;
     content: "";
-    background-color: rgb(0, 168, 22);
+    background-color: var(--light-green);
 }
 
 .twoutbtn:hover:before {
@@ -669,7 +768,7 @@ h4 {
 .card:hover {
     transition: transform 500ms ease;
     transform: scale(1.05);
-    box-shadow: 0px 0px 50px rgb(0, 168, 22);
+    box-shadow: 0px 0px 50px var(--light-green);
 }
 
 .card-content {
@@ -709,7 +808,7 @@ h4 {
     left: calc(var(--padding)*-1);
     bottom: -1vh;
     width: calc(100% + var(--padding));
-    background: rgb(0, 168, 22);
+    background: var(--light-green);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 500ms ease-in-out;
@@ -728,7 +827,7 @@ h4 {
     display: inline-block;
     text-decoration: none;
     color: black;
-    background-color: rgb(0, 168, 22);
+    background-color: var(--light-green);
     padding: .5em 1.25em;
     transition: 200ms ease-in-out;
     border-radius: .25em;
@@ -736,7 +835,7 @@ h4 {
 
 .button:hover {
     transition: 200ms ease-in-out;
-    background-color: rgb(10, 90, 17);
+    background-color: var(--dark-green);
 }
 
 .animheading {
@@ -821,12 +920,12 @@ input[type="submit"] {
     border: none;
     outline: none;
     cursor: pointer;
-    background: rgb(10, 90, 17);
+    background: var(--dark-green);
     color: white;
 }
 
 input[type="submit"]:hover {
-    background: rgb(0, 168, 22);
+    background: var(--light-green);
 }
 
 
@@ -874,9 +973,10 @@ input[type="submit"]:hover {
 }
 
 .card2 a {
-    background-color: rgb(10, 90, 17);
+    background-color: var(--dark-green);
     color: white;
     padding: 15px 20px;
+    line-height: 5vh;
     display: block;
     text-align: center;
     margin: 20px 50px;
@@ -886,7 +986,7 @@ input[type="submit"]:hover {
 }
 
 .card2 a:hover {
-    background-color: rgb(0, 168, 22);
+    background-color: var(--light-green);
     transition: ease-in-out 200ms;
 }
 
@@ -903,7 +1003,171 @@ input[type="submit"]:hover {
     cursor: pointer;
     transform: scale(1.03);
     transition: all 1s ease-in-out;
-    box-shadow: 0px 0px 50px rgb(0, 168, 22);
+    box-shadow: 0px 0px 50px var(--light-green);
+}
+
+
+/* Event Cards */
+
+.eventcardcontainer {
+    display: flex;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.card27 {
+    /* margin-top: 15vh; */
+    margin-left: 3vw;
+    position: relative;
+    width: 30vw;
+    height: 650px;
+    background: #0F0F0F;
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.card27:hover {
+    box-shadow: 0px 0px 50px var(--light-green);
+    background-color: rgb(0, 36, 3);
+    transition: ease 0.5s;
+}
+
+.card27::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #1a743c;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+#basicet::before {
+    background: #1a743c;
+}
+
+#advet::before {
+    background-color: #009dff;
+    /* background-image: linear-gradient(315deg, #979797 0%, #2e4863 40%); */
+    transition: ease-in-out 0.5s;
+}
+
+#vret::before {
+    background-color: #d09d1f;
+    /* background-image: linear-gradient(315deg, #d09d1f 0%, #6b4f09 40%); */
+}
+
+.card27:hover::before {
+    top: -70;
+    transform: skewY(390deg);
+}
+
+.card27::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.card27 .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card27 .imgBx img {
+    max-width: 100%;
+    transition: ease 0.3s;
+}
+
+.card27:hover .imgBx img {
+    transition: ease 0.5s;
+}
+
+.card27:hover .imgBx img {
+    max-width: 50%;
+}
+
+.card27 .contentBx {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.card27 .contentBx h3 {
+    font-size: 40px;
+    margin-top: 100px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.2s;
+}
+
+.card27 .contentBx .price {
+    margin-top: 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: white;
+    font-weight: 300;
+    /* letter-spacing: 1px; */
+    color: rgba(0, 0, 0, 0);
+    transition: ease 0.2s;
+}
+
+.card27:hover .contentBx .price {
+    margin-top: -40px;
+    color: white;
+    transition: ease 0.8s;
+}
+
+#advet .contentBx .price {
+    font-size: 14px;
+}
+
+.card27 .contentBx #buy {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 10px 30px;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    /* background: #1a743c; */
+    border-radius: 30px;
+    width: 200px;
+    height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-left: 50%;
+    line-height: 25px;
+}
+
+.card27:hover .contentBx h3 {
+    margin-top: -30px;
+    transition: ease 0.5s;
+    color: #000;
+    text-shadow: 0 0 10px #FFF;
+}
+
+.card27:hover .contentBx .buy {
+    top: 0;
+    opacity: 1;
 }
 
 
@@ -922,8 +1186,8 @@ input[type="submit"]:hover {
     font-family: sans-serif;
     box-sizing: border-box;
     background: linear-gradient(90deg, #0a5a11, #1acad6, #0f9099, #00a816);
-    /* light green : rgb(0, 168, 22) */
-    /* dark green : rgb(10, 90, 17) */
+    /* light green : var(--light-green) */
+    /* dark green : var(--dark-green) */
     background-size: 400%;
     border-radius: 30px;
     z-index: 1;
@@ -943,6 +1207,7 @@ input[type="submit"]:hover {
     left: 50vw;
     width: 15vw;
     height: 6vh;
+    line-height: 1vw;
 }
 
 #bookbtn {
@@ -950,7 +1215,7 @@ input[type="submit"]:hover {
     margin-top: 5vh;
     height: 6vh;
     font-size: 1.7vw;
-    line-height: 1.7vw;
+    line-height: 1vw;
 }
 
 .glowbtn:hover {
@@ -979,7 +1244,458 @@ input[type="submit"]:hover {
 }
 
 
+/* DEVELOPMENT */
+
+#ic1 h1 {
+    padding-top: 5vh;
+}
+
+#ic1 a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid green;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+    margin-left: 8vw;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, black);
+}
+
+#ic1 a:hover {
+    transition-delay: 1.5s;
+    color: black;
+    box-shadow: 0 0 10px green, 0 0 20px green, 0 0 40px green, 0 0 80px green, 0 0 160px green;
+}
+
+#ic1 a span {
+    position: relative;
+    z-index: 100;
+}
+
+#ic1 a::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: green;
+    box-shadow: 5px -8px 0 green, 5px 8px 0 green;
+    transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+#ic1 a:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 green, 5px 0 0 green;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+#ic1 a::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: green;
+    box-shadow: -5px -8px 0 green, -5px 8px 0 green;
+    transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+    transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+#ic1 a:hover::after {
+    width: 60%;
+    height: 100%;
+    right: 2px;
+    box-shadow: 5px 0 0 green, 5px 0 0 green;
+    transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+
+/* Mobile Menu */
+
+.hamburger {
+    position: relative;
+    margin-top: -7vw;
+    display: block;
+    width: 45px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: 92vw;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 10;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 1;
+    background-color: black;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: green;
+}
+
+
+/* Site settings */
+
+.skeuo__switch {
+    height: 10vh;
+    background-color: var(--container-color);
+    padding: 0 2vh;
+    margin-right: 10px;
+    padding-right: 20px;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.skeuo__switch h1 {
+    font-family: 'Michroma', sans-serif;
+    /* font-size: 10vh; */
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    padding-left: 6vw;
+    padding-right: 3vw;
+    text-align: left;
+    position: relative;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.skeuo__switch p {
+    padding-left: 4vw;
+    padding-right: 1vw;
+}
+
+.skeuo__input {
+    display: none;
+}
+
+.skeuo__rail {
+    position: relative;
+    width: 88px;
+    height: 28px;
+    background-color: var(--container-color-light);
+    border-radius: 3rem;
+}
+
+.skeuo__circle {
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: radial-gradient(circle at 33%, #bedfbd 0%, #23641d 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    /* transition: transform .4s; */
+    transition: ease-in .2s;
+}
+
+.skeuo__indicator {
+    width: 12px;
+    height: 12px;
+    background-color: var(--indicator-color-active);
+    border-radius: 50%;
+    margin-left: 1.5rem;
+    transition: .4s;
+}
+
+
+/* Toggle animation effects */
+
+.skeuo__input:checked~.skeuo__rail .skeuo__circle {
+    background: radial-gradient(circle at 33%, #d7d8da 0%, #5d5e65 50%, rgba(255, 255, 255, 0) 100%);
+    transform: translate(52px, -50%);
+}
+
+.skeuo__input:checked~.skeuo__indicator {
+    background-color: var(--indicator-color-deactive);
+}
+
+
+/* Telemetry Cards */
+
+.telemetrycardcontainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.telemetrycardcontainer .telemetrycard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #949494;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    background: rgba(0, 0, 0, 0.438);
+    overflow: hidden;
+    opacity: 0.2;
+    animation-name: animate9;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.telemetrycard::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(97, 97, 97, 0.842);
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+.telemetrycard:hover::before {
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.telemetrycardcontainer .telemetrycard .telemetrycontent {
+    padding: 30px;
+    text-align: center;
+}
+
+.telemetrycardcontainer .telemetrycard .telemetrycontent h2 {
+    position: absolute;
+    right: 30px;
+    font-size: 4em;
+    font-weight: 800;
+    color: var(--light-green);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.telemetrycardcontainer .telemetrycard:hover .telemetrycontent h2 {
+    opacity: 1;
+    transform: translateY(-145px);
+}
+
+.telemetrycardcontainer .telemetrycard .telemetrycontent h3 {
+    position: relative;
+    text-align: center;
+    top: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    z-index: 2;
+    opacity: 1;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    padding: 0;
+}
+
+.telemetrycardcontainer .telemetrycard:hover .telemetrycontent h3 {
+    opacity: 1;
+}
+
+.telemetrycardcontainer .telemetrycard .telemetrycontent p {
+    position: relative;
+    padding: 20px;
+    font-size: 17px;
+    color: #fff;
+    z-index: 0;
+    opacity: 0.1;
+    font-weight: 300;
+    /* letter-spacing: 1px; */
+    transition: 0.5s;
+}
+
+.telemetrycardcontainer .telemetrycard:hover .telemetrycontent h3,
+.telemetrycardcontainer .telemetrycard:hover .telemetrycontent p {
+    opacity: 1;
+}
+
+.telemetrycardcontainer .telemetrycard .telemetrycontent a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #fff;
+    color: #0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.telemetrycard .telemetrycontent span {
+    transition: 0.5;
+    opacity: 0;
+}
+
+.telemetrycard:hover .telemetrycontent span {
+    opacity: 1;
+}
+
+.telemetrycard span {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.telemetrycard:hover span {
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.telemetrycardcontainer .telemetrycard span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--light-green));
+    animation: animate1 2s linear infinite;
+}
+
+.telemetrycardcontainer .telemetrycard span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--light-green));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+.telemetrycardcontainer .telemetrycard span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, var(--light-green));
+    animation: animate3 2s linear infinite;
+}
+
+.telemetrycardcontainer .telemetrycard span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, var(--light-green));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+
 /* custom animations */
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes animate9 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 @keyframes spin {
     0% {
@@ -1027,11 +1743,15 @@ input[type="submit"]:hover {
     }
 }
 
-
-/* light green : rgb(0, 168, 22) */
-
-
-/* dark green : rgb(10, 90, 17) */
+@keyframes gradientrush {
+    0%,
+    100% {
+        filter: hue-rotate( 0deg);
+    }
+    50% {
+        filter: hue-rotate( 360deg);
+    }
+}
 
 
 /* SFHS TSA 2021*/

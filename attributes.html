@@ -44,17 +44,28 @@
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
+    <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <div class="bar"></div>
+    </button>
     <div class="header" id="header">
-        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
         <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
-        <ul>
+        <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
+
     </div>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html ">HOME</a>
+        <a href="events.html ">EVENTS</a>
+        <a href="contact.html ">CONTACT</a>
+        <a href="attributes.html ">ATTRIBUTES</a>
+        <a href="about.html ">ABOUT</a>
+    </nav>
     <h1 class="heading">Attributes</h1>
     <p class="attpara">
         "Information" Icon made by <a href="http://www.freepik.com/" target="_blank" rel="noopener noreferrer" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer" title="Flaticon"> www.flaticon.com</a>
@@ -74,13 +85,28 @@
         <br> Photo by <a href="https://pixabay.com/users/prodbydaan-13762824/" target="_blank" rel="noopener noreferrer" title="ProdbyDaan">ProdbyDaan</a> from <a href="https://www.pixabay.com/" target="_blank" rel="noopener noreferrer" title="Pixabay">Pixabay</a>
         <br> Maps provided by <a href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer" title="Mapbox">Mapbox</a>
         <br> Form from <a href="https://www.jotform.com/?utm_source=thankyoupage&utm_medium=content&utm_content=thankyou_footer_banner&utm_campaign=form_thankyou_page_new_hp&utm_term=210727178447158" target="_blank" rel="noopener noreferrer" title="JotForm">JotForm</a>
+        <br> Skeumorphic Button from <a href="https://github.com/bedimcode/skeuomorphism-toggle-switch" target="_blank" rel="noopener noreferrer" title="bedimcode">bedimcode</a> on <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            title="GitHub">GitHub</a>
         <br> All other images and resources were made by our team!
         <br>
         <br> CTE Here: <a href="SFHS/index.html" target="_blank" rel="noopener noreferrer">Link</a>
         <br> Portfolio Here: <a href="https://drive.google.com/drive/folders/1nxhTr8RwfAtPGobbZDRWIG8Kqu3rhtQd?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a>
     </p>
 
+    <label class="skeuo__switch" id="skeu">
+        <h1>Site Settings</h1>
+        <p>Scroll Snapping</p>
+        <input type="checkbox" class="skeuo__input" id="scrollsnap" onclick="setSnap()">
+        
+        <div class="skeuo__rail">
+            <span class="skeuo__circle"></span>
+        </div>
+
+        <span class="skeuo__indicator"></span>
+    </label>
+
     <script src="js/loadelements.js"></script>
+    <script src="js/userSettings.js"></script>
     <script src="js/mobController.js"></script>
 </body>
 
