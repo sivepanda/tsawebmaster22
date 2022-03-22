@@ -400,9 +400,12 @@ h3 {
     display: none;
 }
 
-#ic2cc h3 {}
+#ic2cc h3 {
+    margin-bottom: 0vh;
+}
 
 #ic2cc p {
+    padding-top:0vh;
     text-align: center;
     margin-top: 0vh;
 }
@@ -429,6 +432,10 @@ h3 {
     background-repeat: no-repeat;
     margin-bottom: 10vh;
     background-color: rgba(0, 0, 0, 0);
+}
+
+#artc1 {
+    margin-top:15vh;
 }
 
 #map {
@@ -1027,6 +1034,10 @@ input[type="submit"]:hover {
 .card27:hover .contentBx .buy {
     top: 0;
     opacity: 1;
+}
+
+.desktop {
+    display: none;
 }
 
 @keyframes animate {
