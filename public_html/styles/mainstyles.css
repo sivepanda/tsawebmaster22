@@ -1696,6 +1696,10 @@ input[type="submit"]:hover {
     position: relative;
 }
 
+.mobile {
+    display:none;
+}
+
 
 /* custom animations */
 
