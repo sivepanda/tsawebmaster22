@@ -1693,7 +1693,7 @@ input[type="submit"]:hover {
 }
 
 .disclaimer {
-    display: relative !important;
+    position: relative !important;
 }
 
 .mobile {
