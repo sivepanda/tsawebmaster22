@@ -44,7 +44,7 @@ jobs:
           # ftp username
           username: nuwrld
           # ftp password
-          password: FTP_PASS
+          password: ${{ secrets.FTP_PASS }}
           # Server port to connect to (read your web hosts docs)
           port: 21
           # protocol to deploy with - ftp, ftps, or ftps-legacy
