@@ -32,25 +32,73 @@
 </head>
 
 <body>
-
-
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
+    <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <div class="bar"></div>
+    </button>
     <div class="header" id="header">
-        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
-        <img class="logo" onclick="window.location.href = 'index.html';">
-        <ul>
+        <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
+        <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
     </div>
-
-
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html ">HOME</a>
+        <a href="events.html ">EVENTS</a>
+        <a href="contact.html ">CONTACT</a>
+        <a href="attributes.html ">ATTRIBUTES</a>
+        <a href="about.html ">ABOUT</a>
+    </nav>
     <div class="contentbox" id="ec1">
+        <h1>Event Tiers</h1>
+    </div>
+    <div class="eventcardcontainer" id="ec1cc">
+        <div class="card27" id="basicet">
+            <div class="imgBx">
+                <img src="resources/images/novis.png">
+            </div>
+            <div class="contentBx">
+                <h3>Basic</h3>
+                <h1 class="price">The basic tier offers the use of our revolutionary visual and audio codecs. We include the use of the basic tier of our lossless Intillis Novis sound and visual systems, as well as provide access to high definition 1440p Streaming. You
+                    will be able to access our app (available on a wide range of operating systems and devices) that allows you to take advantage of the artist’s creative vision.</h1>
+                <a href="book.html" class="glowbtn" id="buy">Buy Now</a>
+            </div>
+        </div>
+        <div class="card27" id="advet">
+            <div class="imgBx">
+                <img src="resources/images/novis_adv.png">
+            </div>
+            <div class="contentBx">
+                <h3>Advanced</h3>
+                <h1 class="price">The advanced tier offers access to our best audio and visual codecs, not only lossless, but also putting the audio in a 3D space. Furthermore, we stream the event in 4K HDR at 120fps. All our movements will be fluid and natural, imagery
+                    will be accurate and crisp, and you will be able to experience the event of a lifetime as if you are sitting directly in front of them. You also get full advantage of features allowing you to communicate with the artist in several
+                    ways - from requesting the artist what song they should play next, to being placed in an audio-engineered “virtual room” where the event takes place, just like if you were at an in-person festival. Our creator tools allow the artist
+                    to take advantage of the virtual nature of the event.</h1>
+                <a href="book.html" class="glowbtn" id="buy">Buy Now</a>
+            </div>
+        </div>
+        <div class="card27" id="vret">
+            <div class="imgBx">
+                <img src="resources/images/novis_vr.png">
+            </div>
+            <div class="contentBx">
+                <h3>Pro</h3>
+                <h1 class="price">This is the next generation of streaming. Not only are you taking advantage of our advanced Intillis Novis audio and video streaming codecs to their fullest - with ZERO compression whatsoever, but you also have access to our visual 3D
+                    stage. You are able to immerse yourself in the stream like never before, and allow the artist to take full control of your experience in ways never before possible. At 8K HDR at 140 fps, the stage will not only sound, but look natural
+                    to the viewer. The artist will be able to take on a creative vision that would otherwise be impossible to attain in real festivals. We offer the ability to rent or buy one of our own custom headsets that take full advantage of Intillis
+                    Novis, and we also offer the ability to use your own VR headset.</h1>
+                <a href="book.html" class="glowbtn" id="buy">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="contentbox" id="ec1">
         <h1>Event Tiers</h1>
         <h3>Basic</h3>
         <p>The basic tier offers the use of our revolutionary visual and audio codecs. We include the use of the basic tier of our lossless Intillis Novis sound and visual systems, as well as provide access to high definition 1440p Streaming. You will be
@@ -67,10 +115,10 @@
             offer the ability to use your own VR headset.</p>
         <a class="glowbtn" id="backbtn" href="book.html" style="font-family: 'Barlow Condensed', sans-serif;">Book Now!</a>
 
-    </div>
+    </div> -->
     <div class="contentbox" id="ec2">
         <h1 id="ec2title">Past Artists</h1>
-        <p class="description"> Hover over an artist name to lean more about them!
+        <p class="description"> Hover over an artist name to learn more about them!
         </p>
         <h3 class="title">Bassthoven</h3>
         <p class="description">A 54-year-old Korean artist who goes by the name of Bassthoven. His music is quite distinct from other electronica artists as it connects the old classical theme with the more recent ambient electronic music of today. Although an avid supporter
@@ -104,6 +152,7 @@
     <script src="js/mobController.js"></script>
     <script async src="js/listinfo.js"></script>
     <script async src="js/loadelements.js"></script>
+    <script async src="js/userSettings.js"></script>
     <script src="js/collapsibleController.js"></script>
 
 </body>

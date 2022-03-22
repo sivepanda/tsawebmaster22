@@ -44,18 +44,29 @@
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
+    <button class="hamburger" id="hamburger" onclick=toggleMenu()>
+        <div class="bar"></div>
+    </button>
     <div class="header" id="header">
-        <img class="hambgrmenu" id="hambgrmenu" src="resources/images/hambgrmenu.png" alt="menu" onclick="openMenu()">
+        <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
         <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
-        <ul>
+        <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
+
     </div>
-    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html ">HOME</a>
+        <a href="events.html ">EVENTS</a>
+        <a href="contact.html ">CONTACT</a>
+        <a href="attributes.html ">ATTRIBUTES</a>
+        <a href="about.html ">ABOUT</a>
+    </nav>
+    <!-- </div> -->
     <div class="contentbox" id="ac1">
         <h1>WHO ARE WE?</h1>
         <p>In 2020, the number of fans in attendance in concerts, sports games, and other venues dropped dramatically due to the COVID-19 pandemic. Our mission at NU_WRLD is to fire up the thrill of going to such places, specifically concerts or music related
@@ -64,7 +75,6 @@
             concert giving a truly unique experience to the viewer. Welcome to the event of the future.
             <p>
     </div>
-
     <div class="contentbox" id="ac2">
         <div class="biglinkleft" onclick="window.location.href = 'newsroom.html';">
             <h2 class="biglink">Newsroom</h2>
@@ -75,6 +85,7 @@
     </div>
 
 
+    <script async src="js/userSettings.js"></script>
     <script src="js/loadelements.js"></script>
     <script src="js/mobController.js"></script>
     <script src="js/hover.js"></script>
