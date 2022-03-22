@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html" style=" overflow-x: clip;">
 
 <head>
     <meta name="viewport" id="viewport-meta" content="width=device-width, height=device-height">
@@ -40,7 +40,7 @@
     </style>
 </head>
 
-<body id="indexpage">
+<body id="indexpage" style=" overflow-x: clip;">
     <div class="loadtank" id="loadtank">
         <div class="loader"></div>
     </div>
@@ -50,7 +50,7 @@
     <div class="header" id="header">
         <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
-        <img class="logo" alt="logo" onclick="window.location.href = 'index.html';">
+        <img class="logo" id="mainlogoind" alt="logo" onclick="window.location.href = 'index.html';">
         <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
@@ -67,21 +67,27 @@
         <a href="about.html ">ABOUT</a>
     </nav>
     <section class="contentbox" id="ic1">
-        <h1>The NU_WRLD</h1>
+        <img id="ic1logo" class="logo" alt="logo" src="resources/images/nw22.png">
+        <h1 id="ic1h1">The NU_WRLD</h1>
         <p>Welcome to the NU_WRLD_22 festival. This is a new-age digital event that caters to an increasingly globalized network of artists and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary
             augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world! No longer do you have to worry about passports, event tickets, and your health to experience a festival
-            and its experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits!
-        </p>
-        <a href="#ic4 "><span>Learn More</span></a>
+            and its experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits! </p>
+
+        <!--and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary
+        augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world!-->
+        <a href="#ic4" id="ic1btn"><span>Learn More</span></a>
+        <img id="inddownarr" onclick="window.location.href = '#ic2';" class="inddownarr" alt="downwards arrow" src="resources/images/downarr.png">
     </section>
     <section class="contentbox" id="ic2">
-        <h1>THE SOUND STAGE</h1>
+        <div id="ic2h1cont">
+            <h1 id="ic2h1">THE SOUND STAGE</h1>
+        </div>
         <p>
             The advanced sound quality achieved by our patented Initiis Novis sound system provides studio-quality sound like you've never heard before. Our state-of-the-art lossless streaming codecs provided by our Intillis Novis technologies are revolutionary,
             providing for a full and accurate sound being streamed directly to you, with no loss to rudimentary compression tactics.
         </p>
-        <div class="telemetrycardcontainer" id="1c2cc">
-            <div class="telemetrycard">
+        <div class="telemetrycardcontainer" id="ic2cc">
+            <div class="telemetrycard" id="ic2cc1">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,7 +101,7 @@
                     </p>
                 </div>
             </div>
-            <div class="telemetrycard">
+            <div class="telemetrycard" id="ic2cc2">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -123,14 +129,16 @@
         </div>
     </section>
     <div class="contentbox " id="ic3">
-        <h1>THE VISUALS</h1>
-        <p>
+        <div id="ic3h1cont">
+            <h1 id="ic3h1">THE VISUALS</h1>
+        </div>
+        <p id="ic3bp">
             We've revolutionized what it means to stream events. Our new VR stage allows artists to take a creative path with their music like never before. Not only is it using the most modern VR and AR systems, but, along with the Intillis Novis sound systems,
             allows you to be able to <i>feel</i> like you are at the festival, with the artist. Not only that, but the artist will be able to fully manipulate the 3D space, allowing for never-before seen visual effects to make sure that all
             of your senses are indulged by their music.
         </p>
-        <div class="telemetrycardcontainer" id="1c3cc">
-            <div class="telemetrycard">
+        <div class="telemetrycardcontainer" id="ic3cc">
+            <div class="telemetrycard" id="ic3cc1">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -144,7 +152,7 @@
                     </p>
                 </div>
             </div>
-            <div class="telemetrycard">
+            <div class="telemetrycard" id="ic3cc2">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -181,7 +189,7 @@
                 can opt for a more immersive 3D experience, allowing you to fully indulge yourself in the creative mindsets of your favorite artists. We do this at no overly inflated cost. We make sure our event prices are always accessible for every
                 price point, and that every event tier is fairly and competitively priced. We enable you to attend events for a price far more affordable than a physical festival, while still delivering a similar experience.
             </p>
-            <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;">Book Now</a>
+            <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Book Now</span></a>
         </div>
         <div class="card2" id="artistic4">
             <div class="card-image card-2"></div>
@@ -190,41 +198,12 @@
                 experiences to be equally accessible to anyone with an internet connection, regardless of location. Not only that, our dedicated team of software engineers and graphics designers ensure that the full scope of an artist’s vision is realized.
                 We bring together critically acclaimed international artists who otherwise may have a difficult time expanding their reach, give them a platform and tools to expand their reach and creative vision, all to bring you an event of a lifetime.
             </p>
-            <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;">Learn More</a>
+            <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Learn More</span></a>
         </div>
     </section>
 </body>
 
 <script async="true " src="js/loadelements.js"></script>
-<script async src="js/mobController.js"></script>
-<script async src="js/userSettings.js"></script>
-
-
-
-</html>
-
-<!--SFHS TSA 2021-->>
-<script async src="js/mobController.js"></script>
-<script async src="js/userSettings.js"></script>
-
-
-
-</html>
-
-<!--SFHS TSA 2021-->w Condensed', sans-serif;">Learn More</a>
-</div>
-</section>
-</body>
-
-<script async="true " src="js/loadelements.js"></script>
-<script async src="js/mobController.js"></script>
-<script async src="js/userSettings.js"></script>
-
-
-
-</html>
-
-<!--SFHS TSA 2021-->>
 <script async src="js/mobController.js"></script>
 <script async src="js/userSettings.js"></script>
 

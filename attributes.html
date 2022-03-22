@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 
 <head>
     <meta name="viewport" content="width=device-width, height=device-height">
@@ -93,17 +93,27 @@
         <br> Portfolio Here: <a href="https://drive.google.com/drive/folders/1nxhTr8RwfAtPGobbZDRWIG8Kqu3rhtQd?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a>
     </p>
 
-    <label class="skeuo__switch" id="skeu">
+    <div class="sitesettingspanel" id="sitesettingspanel">
         <h1>Site Settings</h1>
-        <p>Scroll Snapping</p>
-        <input type="checkbox" class="skeuo__input" id="scrollsnap" onclick="setSnap()">
-        
-        <div class="skeuo__rail">
-            <span class="skeuo__circle"></span>
-        </div>
+        <label class="skeuo__switch" for="scrollsnap" id="skeu_ss">
+            <p>Scroll Snapping</p>
+            <input type="checkbox" class="skeuo__input" id="scrollsnap" onclick="setSnap()">
+            
+            <div class="skeuo__rail" id="ss_rail">
+                <span class="skeuo__circle" id="ss_circle"></span>
+            </div>
+            <span class="skeuo__indicator" id="ss_ind"></span>   
+        </label>
 
-        <span class="skeuo__indicator"></span>
-    </label>
+        <label class="skeuo__switch" for="custscroll" id="skeu_cs">
+            <p>Custom Scrollbar</p>
+            <input type="checkbox" class="skeuo__input" id="custscroll" onclick="setScrollbar()">
+            <div class="skeuo__rail" id="cs_rail">
+                <span class="skeuo__circle" id="cs_circle"></span>
+            </div>
+            <span class="skeuo__indicator" id="cs_ind"></span>
+        </label>
+    </div>
 
     <script src="js/loadelements.js"></script>
     <script src="js/userSettings.js"></script>

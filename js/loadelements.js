@@ -1,4 +1,7 @@
 //load logo and other header elements
+
+
+
 var header = document.getElementById("header").children;
 header[2].src = "resources/images/nw22.png";
 console.log('loaded desktop logo');
@@ -32,11 +35,20 @@ var timerComplete = false;
 var defaultRemover = document.createElement('div');
 var progressbar = document.createElement('div');
 var scrollPath = document.createElement('div');
+var userScrollbarSetting = getCookie("customscrollbar") == "true" ? true : false;
 
-createScrollbar();
+
+var height = window.innerHeight;
+var width = window.innerWidth;
+
+
+if (width > height) {
+
+    createScrollbar();
+}
 
 // document.getElementById("indexpage") ? (localWebStorage.getItem('scrollsnapping') == "true" ? document.getElementById("indexpage").style.scrollSnapType = 'none' : document.getElementById("indexpage").style.scrollSnapType = 'y mandatory') : console.log("No snap target");
-if (document.getElementById("indexpage")) {
+if (document.getElementById("indexpage") && width > height) {
     console.log("scroll snapping is set as" + getCookie('scrollsnapping'));
 
     if (getCookie('scrollsnapping') == "true") {
@@ -58,16 +70,27 @@ window.addEventListener('load', (event) => {
 
 /* scrollbar */
 function barProgress() { //height adjustment on scrolling
-    var progressbar = document.getElementById('progressbar');
-    var totalHeight = document.body.scrollHeight - window.innerHeight;
-    progressbar.style.height = ((window.pageYOffset / totalHeight) * 100) + '%';
+    if (userScrollbarSetting) {
+        var progressbar = document.getElementById('progressbar');
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+        progressbar ? progressbar.style.height = ((window.pageYOffset / totalHeight) * 100) + '%' : null;
+    }
 }
 
 function createScrollbar() { //appending scrollbar to all pages
-    scrollPath.setAttribute('id', 'scrollPath');
-    document.body.append(scrollPath);
-    progressbar.setAttribute('id', 'progressbar');
-    document.body.append(progressbar);
+    // var docBody = document.getElementsByTagName("body");
+    // var html = document.getElementById("html");
+    console.log('custom scrollbar set as ' + userScrollbarSetting)
+    if (!userScrollbarSetting) {
+        console.log("setting up custom scrollbar")
+        scrollPath.setAttribute('id', 'scrollPath');
+        document.body.append(scrollPath);
+        progressbar.setAttribute('id', 'progressbar');
+        document.body.append(progressbar);
+    } else {
+        document.body.setAttribute("style", "scrollbar-width:auto;");
+        console.log("normal scrollbar");
+    }
 }
 
 /*LOADING SCREEN */
@@ -78,11 +101,13 @@ function loaded() {
         load.remove();
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
-        document.body.addEventListener('scroll', function(e) {
-            var progressbar = document.getElementById('progressbar');
-            var totalHeight = document.body.scrollHeight - window.innerHeight;
-            progressbar.style.height = ((document.body.scrollTop / totalHeight) * 100) + '%';
-        });
+        if (width > height) {
+            document.body.addEventListener('scroll', function(e) {
+                var progressbar = document.getElementById('progressbar');
+                var totalHeight = document.body.scrollHeight - window.innerHeight;
+                progressbar.style.height = ((document.body.scrollTop / totalHeight) * 100) + '%';
+            });
+        }
     }
 }
 

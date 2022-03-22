@@ -1,28 +1,47 @@
-var checkBox = document.getElementById("scrollsnap");
+var scrollCheckBox = document.getElementById("scrollsnap") ? document.getElementById("scrollsnap") : null;
+var scrollRail = document.getElementById("ss_rail") ? document.getElementById("ss_rail") : null;
+var scrollCircle = document.getElementById("ss_circle") ? document.getElementById("ss_circle") : null;
+var barCheckBox = document.getElementById("custscroll") ? document.getElementById("custscroll") : null;
 
 function setSnap() {
-    if (isLoaded) {
-        var localWebStorage = window.localStorage;
-        var checkBox = document.getElementById("scrollsnap");
+    scrollCheckBox.classList.toggle("active");
+    // scrollRail.classList.toggle("active");
+    // scrollCircle.classList.toggle("active");
+    setUserSetting("scrollsnap", 'scrollsnapping');
+    console.log("here");
+}
 
-        // If the checkbox is checked, display the output text
+function setScrollbar() {
+    barCheckBox.classList.toggle("active");
+    console.log("there");
+    setUserSetting("custscroll", "customscrollbar");
+    location.reload(); 
+}
+
+function setUserSetting(elementId, cookieName) {
+    if (isLoaded) {
+        var checkBox = document.getElementById(elementId);
+
+        //if checkbox is checked, set cookiename to true or false if not
         if (checkBox.checked == false) {
-            document.cookie = 'scrollsnapping=false';
-            localWebStorage.setItem("scrollsnapping", "false");
+            document.cookie = cookieName + '=false; SameSite=Lax;';
+            localWebStorage.setItem(cookieName, "false");
         } else {
-            document.cookie = 'scrollsnapping=true';
-            localWebStorage.setItem("scrollsnapping", "true");
+            document.cookie = cookieName + '=true; SameSite=Lax;';
+            localWebStorage.setItem(cookieName, "true");
 
         }
-
-
     }
 }
 
 //reflect user settings
 if (getCookie('scrollsnapping') == "true") {
-    checkBox.checked = true;
-    console.log("e");
+    scrollCheckBox.checked = true;
+    console.log("Set Scrollsnapping switch to true");
+}
+if (getCookie('customscrollbar') == "true") {
+    barCheckBox.checked = true;
+    console.log("Set CustomScrollbar switch to true");
 }
 
 function setCookie(cname, cvalue) {
