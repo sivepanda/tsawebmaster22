@@ -1693,11 +1693,11 @@ input[type="submit"]:hover {
 }
 
 .disclaimer {
-    position: relative;
+    position: relative !important;
 }
 
 .mobile {
-    display:none;
+    display: none;
 }
 
 
