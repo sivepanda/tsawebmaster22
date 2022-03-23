@@ -1040,6 +1040,10 @@ input[type="submit"]:hover {
     display: none;
 }
 
+.disclaimer {
+    position: relative !important;
+}
+
 @keyframes animate {
     0% {
         background-position: 0%;
