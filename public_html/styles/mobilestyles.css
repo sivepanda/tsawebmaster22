@@ -3,7 +3,7 @@ body {
     margin: 0;
     background: rgb(0, 0, 0);
     font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 100%;
+    /* font-weight: 100%; */
     overflow-x: hidden;
 }
 
@@ -222,8 +222,8 @@ h3 {
 .contentbox p,
 .card2 p {
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.63);
-    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 23px;
     color: white;
     font-weight: 300;
     line-height: 1.2;
@@ -231,6 +231,7 @@ h3 {
     padding-right: 5vw;
     /* position: absolute; */
     margin-top: 5vh;
+    /* word-spacing: 7px; */
 }
 
 #ec1 {
@@ -297,6 +298,7 @@ h3 {
 }
 
 #ic1 .logo {
+    margin-top: 5vh;
     width: 80vw;
     margin-left: 8vw;
 }
@@ -316,8 +318,6 @@ h3 {
     animation: bounce 1s linear infinite;
     /* margin-top: 60vh; */
 }
-
-
 
 #backbtn {
     background-color: rgb(10, 90, 17);
@@ -365,10 +365,10 @@ h3 {
     position: -webkit-sticky;
     /* position:fixed; */
     top: 12vh;
-    text-align:center;
+    text-align: center;
     width: 100vw;
     /* margin-top:0vh; */
-    margin-bottom:0vh;
+    margin-bottom: 0vh;
 }
 
 #ic2 p {
@@ -383,6 +383,7 @@ h3 {
 
 #ic3bp {
     overflow: hidden;
+    display: none;
     transition: all ease-in-out 10ms;
 }
 
@@ -405,7 +406,7 @@ h3 {
 }
 
 #ic2cc p {
-    padding-top:0vh;
+    padding-top: 0vh;
     text-align: center;
     margin-top: 0vh;
 }
@@ -416,12 +417,45 @@ h3 {
 }
 
 #ic3 {
-    background-image: url("../resources/images/vrspeed.jpg");
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, 0.6)), url("../resources/images/vrspeed.jpg");
+    /* background-image: url("../resources/images/vrspeed.jpg");*/
     background-size: cover;
-    background-position: center -20vh;
+    background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 10vh;
-    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 10vh;
+    will-change: transform;
+    /*background-color: rgba(0, 0, 0, 0);*/
+}
+
+#ic4 {
+    will-change: transform;
+}
+
+.card2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    padding-bottom: 10vh;
+}
+
+#eventic4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.233)), url("../resources/images/crowd.jpg");
+}
+
+#artistic4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.233)), url("../resources/images/producer.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.cardh1cont {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12vh;
+    background-color: rgba(0, 0, 0, 0.486);
 }
 
 #ac1 {
@@ -435,7 +469,7 @@ h3 {
 }
 
 #artc1 {
-    margin-top:15vh;
+    margin-top: 15vh;
 }
 
 #map {
@@ -586,6 +620,15 @@ h3 {
     transition: all ease-in-out 200ms;
 }
 
+.animheading {
+    color: white;
+    font-size: 3vh;
+    margin-top: 0vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    font-weight: 300;
+}
+
 .active,
 .collapsible:hover {
     background-color: rgb(71, 71, 71);
@@ -660,28 +703,23 @@ h3 {
     margin-top: 3vh;
 }
 
-.card2 {
-    align-self: center;
-    width: 100vw;
-    margin-bottom: 20vh;
-    height: 62vh;
-    border-radius: 20px;
-}
-
 .card-image {
-    background-color: aqua;
+    /* background-color: aqua;
     height: 10vh;
     margin-bottom: 0px;
-    background-size: cover;
+    background-size: cover; */
+    display: none
 }
 
 .card-1 {
     background-image: url(../resources/images/crowd.jpg);
+    height: 200px;
 }
 
 .card-2 {
     background-image: url(../resources/images/producer.jpg);
-    margin-top: 30vh;
+    margin-top: 40vh;
+    height: 200px;
 }
 
 .card2 h1 {
@@ -722,16 +760,41 @@ h3 {
 }
 
 #ac2 {
-    height: 18vh;
-    background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg");
+    /* height: 30vh; */
+    /* background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg"); */
 }
 
 #ac2 h2 {
-    font-size: 4vh;
+    /* font-size: 4vh;
     padding-top: 0vh;
     margin-top: 0vh;
     padding-bottom: 0vh;
-    margin-bottom: 0vh;
+    margin-bottom: 0vh; */
+    position: relative;
+    display: inline-block;
+    /* transform: translate(-50%, -50%); */
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 5.5vh;
+    color: #fff;
+    font-size: 4vh;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #0a5a11, #1acad6, #0f9099, #00a816);
+    border-width: 3px;
+    background-size: 400%;
+    z-index: 1;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 20px;
+    transition: ease-in-out 200ms;
+    text-decoration: none;
+    align-self: center;
 }
 
 h2 {
@@ -740,19 +803,19 @@ h2 {
 }
 
 .biglinkleft {
-    padding-top: 2vh;
+    /* padding-top: 2vh;
     padding-bottom: 2vh;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.13); */
 }
 
 .biglinkright {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    /* padding-top: 2vh;
+    padding-bottom: 2vh; */
 }
 
 .heading {
     font-family: 'Michroma', sans-serif;
-    font-size: 5vh;
+    font-size: 6vh;
     color: rgba(255, 255, 255);
     text-transform: capitalize;
     text-align: center;
@@ -771,7 +834,7 @@ h2 {
 input {
     position: relative;
     display: inline-block;
-    font-size: 2vh;
+    font-size: 4vh;
     font-family: 'Barlow Condensed', sans-serif;
     box-sizing: border-box;
     transition: .5s;
@@ -779,9 +842,10 @@ input {
 
 input[type="text"] {
     background: rgb(255, 255, 255);
-    margin-left: 15vw;
-    width: 50vw;
-    height: 5vh;
+    margin-left: 10vw;
+    width: 60vw;
+    height: 10vh;
+    right: 3px;
     border: none;
     outline: none;
     padding: 0 25px;
@@ -792,7 +856,9 @@ input[type="submit"] {
     position: relative;
     border-radius: 0 25px 25px 0;
     width: 20vw;
-    height: 5vh;
+    height: 10vh;
+    left: 0px;
+    right: 100px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -922,6 +988,29 @@ input[type="submit"]:hover {
     background: #0F0F0F;
     overflow: hidden;
     align-items: center;
+}
+
+.smile p {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    margin-bottom: 0px;
+}
+
+.smile {
+    background: #404040;
+    position: relative;
+    top: -40px;
+}
+
+.divide p {
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+}
+
+.divide {
+    position: relative;
+    top: 170px;
+    background: #404040
 }
 
 .card27::before {
