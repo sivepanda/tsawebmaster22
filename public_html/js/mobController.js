@@ -116,10 +116,11 @@ if (isMobile) {
             var animationHeight = 64 / 2;
             var logoSize = finalSize + Math.floor((deltaSize) / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight))));
             ic1Logo ? ic1Logo.style.width = logoSize + "vw" : console.log("not index");
+            ic1Logo ? ic1Logo.style.opacity = (1 / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight)))) : console.log("not index");
             ic1Logo ? ic1Logo.style.marginLeft = ((100 - logoSize) / 2) + "vw" : console.log("not index");
             var logoHeight = ic1logo ? ic1Logo.offsetHeight : 0;
             console.log("New margin " + (initialLogoHeight - logoHeight));
-            console.log("Current marginTop: " + compStyle.marginTop);
+            // console.log("Current marginTop: " + compStyle.marginTop);
             ic1h1 ? ic1h1.style.marginTop = ((initialLogoHeight - logoHeight)) + "px" : console.log("not index");
         }
 

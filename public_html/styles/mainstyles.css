@@ -1419,6 +1419,21 @@ input[type="submit"]:hover {
     margin-bottom: 0vh;
 }
 
+.sitesettingspanel h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3vh;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: white; */
+    padding-left: 2vw;
+    padding-right: 2vw;
+    text-align: center;
+    position: relative;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+}
+
 .skeuo__switch {
     height: 10vh;
     background-color: var(--container-color);
@@ -1428,6 +1443,7 @@ input[type="submit"]:hover {
     border-radius: .75rem;
     display: flex;
     align-items: center;
+    align-self: center;
     cursor: pointer;
 }
 
