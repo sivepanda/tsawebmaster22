@@ -6,27 +6,40 @@
     <style>
         .loadtank {
             position: fixed;
-            display: block;
-            width: 100vw;
-            height: 100vh;
+            background: black;
+            margin: 0;
             top: 0;
             left: 0;
-            background-color: black;
-            transition: ease-in-out 100ms;
-            text-align: center;
+            padding: 0;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
             z-index: 99;
-            padding-bottom: 20vw;
+            display: grid;
+            --top-bottom-margins: calc(calc(100vh - 40vw) / 2);
+            grid-template-columns: 30vw 40vw 30vw;
+            grid-template-rows: var(--top-bottom-margins) 40vw var(--top-bottom-margins);
         }
         
-        .loader {
-            border: 2vw solid rgb(0, 168, 22);
-            border-top: 2vw solid rgb(10, 90, 17);
-            border-radius: 50%;
-            width: 10vw;
-            height: 10vw;
-            margin-top: 30vh;
-            margin-left: 44vw;
-            animation: spin 2s cubic-bezier(.72, .72, 0, 1.01) infinite;
+        .video-container {
+            /* align-self: center; */
+            padding-top: 56.25%;
+            height: 0;
+            align-content: center;
+            flex-direction: row;
+            display: flex;
+            height: 10vh;
+            /* position: relative; */
+        }
+        
+        #promo {
+            grid-row: 2;
+            grid-column: 2;
+            width: 40vw;
+            height: 40vw;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         
         .redtext {
@@ -35,21 +48,17 @@
             text-align: center;
             margin-top: 5vh;
         }
-        
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class="loadtank" id="loadtank">
-        <div class="loader"></div>
+        <div class="video-container">
+            <video muted loop infinite autoplay id="promo" class="loadingvid">
+                <source src="resources/videos/nw_loading.mp4" type="video/mp4">
+              </video>
+        </div>
+
     </div>
     <button class="hamburger" id="hamburger" onclick=toggleMenu()>
         <div class="bar"></div>
@@ -83,11 +92,13 @@
             <p>
     </div>
     <div class="contentbox" id="ac2">
-        <div class="biglinkleft" onclick="window.location.href = 'newsroom.html';">
-            <h2 class="biglink">Newsroom</h2>
+    
+        <div class="biglinkleft blcont" onclick="window.location.href = 'newsroom.html';">
+            <h2 id="newsroomtext" class="biglink">Newsroom</h2>
         </div>
-        <div class="biglinkright" onclick="window.location.href = 'faq.html';">
-            <h2 class="biglink">FAQ</h2>
+    
+        <div class="biglinkright blcont" onclick="window.location.href = 'faq.html';">
+            <h2 id="faqtext" class="biglink">FAQ</h2>
         </div>
     </div>
     <p class="redtext"><b>Please note that our hosting service, 000Webhost, appends a notice at the bottom of every page. We do not nescessarily disagree with its message, but it was not voluntarily added nor removable.</b></p>

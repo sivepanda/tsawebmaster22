@@ -270,15 +270,42 @@ body {
     padding-top: 0vw;
 }
 
+#faqtext {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    color: rgba(0, 0, 0, 0);
+    /* margin-left: 150px; */
+}
+
+#newsroomtext {
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: white;
+    color: rgba(0, 0, 0, 0);
+}
+
+.biglink {
+    margin-right: 200px;
+    transform: skew(30deg, 0deg);
+
+}
+
+.contentbox .blcont {
+    transform: skew(-30deg, 0deg);
+
+}
+
 .contentbox .biglinkleft {
     grid-column: 1;
     transition: ease-in-out 400ms;
+    background-color: black;
     grid-row: 1;
 }
 
 .contentbox .biglinkright {
     grid-column: 2;
     grid-row: 1;
+    background-color: white;
+
     transition: ease-in-out 400ms;
 }
 
@@ -386,12 +413,25 @@ body {
     background-color: rgba(0, 0, 0, 0);
 }
 
+.box1 {
+    background-color: black;
+    background: linear-gradient(-68deg, transparent 90px, black 0);
+    width: 55vw;
+}
+
+.box2 {
+    background: linear-gradient(-248deg, transparent 90px, white 0);
+    width: 50vw;
+    margin-right: 200px;
+}
+
 #ac2 {
     height: 40vh;
-    background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg");
+    /*background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg");*/
+    /*background-color: black;*/
     background-size: cover;
     background-position: center;
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0);*/
     display: grid;
     align-items: center;
     grid-template-columns: 50vw 50vw;
@@ -404,7 +444,6 @@ body {
 }
 
 #ac2 h2 {
-    -webkit-text-stroke-color: white;
     text-align: center;
     cursor: pointer;
 }
