@@ -68,6 +68,11 @@ window.addEventListener('load', (event) => {
     loaded();
 });
 
+
+function changeElementIDDisplay(id, display) {
+    document.getElementById(id) ? document.getElementById(id).style.display = display : console.log(id + " replaced");
+}
+
 /* scrollbar */
 function barProgress() { //height adjustment on scrolling
     if (userScrollbarSetting) {
@@ -98,6 +103,7 @@ function createScrollbar() { //appending scrollbar to all pages
 function loaded() {
     if (isLoaded && timerComplete && document.getElementById("loadtank")) {
         var load = document.getElementById("loadtank");
+        changeElementIDDisplay("ic1btn", "");
         load.remove();
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');

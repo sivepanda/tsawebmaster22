@@ -96,7 +96,6 @@ if (isMobile) {
                 ic3bp ? ic3bp.style.height = "0" : console.log("not index");
             } else {
                 ic3bp ? ic3bp.style.height = "1" : console.log("not index");
-                console.log("yo");
             }
         } else {
             headLogo ? headLogo.style.opacity = "0" : console.log("not index");
@@ -104,7 +103,7 @@ if (isMobile) {
 
         }
         if (window.scrollY > 64) {
-            console.log("anim done");
+            //nothing
         } else if (window.scrollY == 0) {
             ic1Logo ? ic1Logo.style.width = 80 + "vw" : console.log("not index");
             ic1Logo ? ic1Logo.style.marginLeft = 10 + "vw" : console.log("not index");
@@ -122,6 +121,32 @@ if (isMobile) {
             console.log("New margin " + (initialLogoHeight - logoHeight));
             // console.log("Current marginTop: " + compStyle.marginTop);
             ic1h1 ? ic1h1.style.marginTop = ((initialLogoHeight - logoHeight)) + "px" : console.log("not index");
+        }
+        if (window.scrollY > 560) {
+            var square = document.getElementById('ic2cc1h3');
+            square.style.setProperty('--tele-anim', "75vw");
+
+            var square = document.getElementById('ic2cc2h3');
+            square.style.setProperty('--tele-anim', "75vw");
+
+            var square = document.getElementById('ic2cc3h3');
+            square.style.setProperty('--tele-anim', "75vw");
+
+        } else {
+            square.style.setProperty('--tele-anim', "0");
+        }
+        if (window.scrollY > 1350) {
+            var square = document.getElementById('ic3cc1h3');
+            square.style.setProperty('--tele-anim', "75vw");
+
+            var square = document.getElementById('ic3cc2h3');
+            square.style.setProperty('--tele-anim', "75vw");
+
+            var square = document.getElementById('ic3cc3h3');
+            square.style.setProperty('--tele-anim', "75vw");
+        } else {
+            square.style.setProperty('--tele-anim', "0");
+
         }
 
     });
@@ -148,6 +173,22 @@ window.addEventListener('load', (event) => {
         mobile_menu.classList.toggle('is-active');
     });
 });
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const square = entry.target.querySelector('.telemetryheading');
+
+        if (entry.isIntersecting) {
+            square.style.setProperty('--tele-anim', "2s getwide");
+            return; // if we added the class, exit the function
+        }
+
+        // We're not intersecting, so remove the class!
+        square.style.setProperty('--tele-anim', "");
+    });
+});
+
 
 function toggleMenu() {
     console.log('menu loaded');
