@@ -385,11 +385,10 @@ h3 {
 .telemetryheading {
     width: 100vw;
     margin-left: 0;
-    height: 10vh;
+    /* height: 10vh; */
     display: flex;
     overflow: hidden;
     align-self: center;
-    --tele-anim: 0vw;
 }
 
 #ic3cc2 {
@@ -408,7 +407,7 @@ h3 {
     /* display: block; */
     width: var(--tele-anim);
     height: 5px;
-    background-color: darkgreen;
+    background-color: green;
     margin: 0px;
     margin-top: 2vh;
     transition: 0.4s;
@@ -442,6 +441,27 @@ h3 {
     }
 }
 
+#ic2cc1h3 h3:before {
+    position: relative;
+    top: 4vh;
+    animation-name: uppp;
+    animation-duration: 5s;
+}
+
+@keyframes uppp {
+    from {
+        top: 4vh;
+    }
+    to {
+        top: 0vh;
+    }
+}
+
+#ic2cc1h3 h3:after {
+    position: relative;
+    top: 0vh;
+}
+
 .triangle {
     width: 0;
     height: 0;
@@ -459,6 +479,7 @@ h3 {
 }
 
 #ic1 {
+    min-height: 80vh;
     height: 88vh;
     padding-top: 12vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("../resources/images/festival-gc56663139_1920.jpg");
@@ -479,6 +500,7 @@ h3 {
     background-color: rgba(0, 0, 0, 0);
     /* overflow-y: scroll; */
     will-change: transform;
+    --tele-anim: 0vw;
 }
 
 #ic2 h1 {
@@ -506,6 +528,7 @@ h3 {
     /* font-size: 6vw; */
     background-color: rgba(0, 0, 0, 0.486);
     padding-top: 0vh;
+    --tele-anim: 0vw;
 }
 
 #ic3bp {

@@ -142,3 +142,38 @@ function getCookie(cname) {
     }
     return "";
 }
+
+
+/*
+function onScrollTo(identity, task) {
+    let options = {
+        root: document.querySelector('#indexpage'),
+        rootMargin: '0px',
+        threshold: 1.0
+    }
+
+    let observer = new IntersectionObserver(callback, options);
+
+    let target = document.querySelector(identity);
+
+    observer.observe(target);
+}
+
+function widen(identity) {
+    square.style.setProperty('--tele-anim', "75vw");
+}
+
+if (document.getElementById("indexpage")) {
+
+    let options = {
+        root: document.querySelector('#indexpage'),
+        rootMargin: '0px',
+        threshold: 1.0
+    }
+
+    let observer = new IntersectionObserver(callback, options);
+
+    let target = document.querySelector('.telemetryheading');
+    observer.observe(target);
+}
+*/

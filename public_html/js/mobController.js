@@ -123,28 +123,18 @@ if (isMobile) {
             ic1h1 ? ic1h1.style.marginTop = ((initialLogoHeight - logoHeight)) + "px" : console.log("not index");
         }
         if (window.scrollY > 560) {
-            var square = document.getElementById('ic2cc1h3');
-            square.style.setProperty('--tele-anim', "75vw");
-
-            var square = document.getElementById('ic2cc2h3');
-            square.style.setProperty('--tele-anim', "75vw");
-
-            var square = document.getElementById('ic2cc3h3');
+            var square = document.getElementById('ic2');
             square.style.setProperty('--tele-anim', "75vw");
 
         } else {
+            var square = document.getElementById('ic2');
             square.style.setProperty('--tele-anim', "0");
         }
-        if (window.scrollY > 1350) {
-            var square = document.getElementById('ic3cc1h3');
-            square.style.setProperty('--tele-anim', "75vw");
-
-            var square = document.getElementById('ic3cc2h3');
-            square.style.setProperty('--tele-anim', "75vw");
-
-            var square = document.getElementById('ic3cc3h3');
+        if (window.scrollY > 800) {
+            var square = document.getElementById('ic3');
             square.style.setProperty('--tele-anim', "75vw");
         } else {
+            var square = document.getElementById('ic3');
             square.style.setProperty('--tele-anim', "0");
 
         }
