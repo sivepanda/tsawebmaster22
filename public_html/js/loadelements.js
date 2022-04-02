@@ -123,6 +123,39 @@ loadInterval = setInterval(function() {
     loaded();
 }, 300);
 
+function elementInViewport(el) {
+    var top = el.offsetTop;
+    var left = el.offsetLeft;
+    var width = el.offsetWidth;
+    var height = el.offsetHeight;
+  
+    while(el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+      left += el.offsetLeft;
+    }
+  
+    return (
+      top >= window.pageYOffset &&
+      left >= window.pageXOffset &&
+      (top + height) <= (window.pageYOffset + window.innerHeight) &&
+      (left + width) <= (window.pageXOffset + window.innerWidth)
+    );
+  }
+
+ /* 
+var cards = document.getElementsByClassName("telemetryheading");
+document.body.addEventListener('scroll', function(e) {
+    for (i = 0, i < cards.length, i++) {
+        if(elementInViewport(cards[i])){
+            cards[i].style.setProperty("--tele-anim", "75vw");
+    
+        }
+    });
+    
+} */
+
+
 //cookies
 function setCookie(cname, cvalue) {
     document.cookie += cname + "=" + cvalue + ";";
@@ -142,6 +175,8 @@ function getCookie(cname) {
     }
     return "";
 }
+
+
 
 
 /*
