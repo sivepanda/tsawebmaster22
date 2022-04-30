@@ -71,6 +71,7 @@
             <li><a href="contact.html">CONTACT</a></li>
             <li><a href="about.html">ABOUT</a></li>
         </ul>
+        <img class="acc" src="resources/images/account.png" alt="account" onclick="window.location.href = 'account-login.html';">
 
     </div>
     <nav class="mobile-nav" id="mobile-nav">
@@ -119,7 +120,18 @@
             <h1>Site Settings</h1>
             <h2>Requires Cookies</h2>
         </div>
-        <label class="skeuo__switch" for="scrollsnap" id="skeu_ss">
+
+        <label for="scrollsnap">
+            <input type="checkbox" id="scrollsnap" name="btn" onclick="setSnap()">
+            <p>Scroll Snapping</p>
+        </label>
+        <label for="custscroll">
+            <input type="checkbox" id="custscroll" name="btn" onclick="setScrollbar()">
+            <p>Custom Scrollbar</p>
+        </label>
+
+
+        <!--<label class="skeuo__switch" for="scrollsnap" id="skeu_ss">
             <p>Scroll Snapping</p>
             <input type="checkbox" class="skeuo__input" id="scrollsnap" onclick="setSnap()">
             
@@ -136,7 +148,20 @@
                 <span class="skeuo__circle" id="cs_circle"></span>
             </div>
             <span class="skeuo__indicator" id="cs_ind"></span>
-        </label>
+        </label>-->
+    </div>
+    <div class="newcirc">
+        <!-- <span class="dot" id="dot"></span> -->
+        <nav class="dotmnu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attributes.html">Attributes</a></li>
+            </ul>
+        </nav>
+
     </div>
 
     <script src="js/loadelements.js"></script>

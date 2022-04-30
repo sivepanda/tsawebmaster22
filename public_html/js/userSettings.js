@@ -15,7 +15,7 @@ function setScrollbar() {
     barCheckBox.classList.toggle("active");
     console.log("there");
     setUserSetting("custscroll", "customscrollbar");
-    location.reload(); 
+    location.reload();
 }
 
 function setUserSetting(elementId, cookieName) {

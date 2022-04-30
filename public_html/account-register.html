@@ -60,6 +60,9 @@
         </div>
 
     </div>
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+    </div>
     <button class="hamburger" id="hamburger" onclick=toggleMenu()>
         <div class="bar"></div>
     </button>
@@ -84,26 +87,64 @@
         <a href="about.html ">ABOUT</a>
     </nav>
     <!-- </div> -->
-    <div class="contentbox" id="ac1">
-        <h1>WHO ARE WE?</h1>
-        <p>In 2020, the number of fans in attendance in concerts, sports games, and other venues dropped dramatically due to the COVID-19 pandemic. Our mission at NU_WRLD is to fire up the thrill of going to such places, specifically concerts or music related
-            events. The truth is that the love for music never died, in fact, it increased over the past year and now as we move back into being a normal functioning society again, people need to feel the excitement of making memories with loved ones
-            at a music event once again. As times change the need for adaptation also changes so we present to you our fully digital music festival. Not only will the prices be cheaper, but the artist can also undergo a more creative process in their
-            concert giving a truly unique experience to the viewer. Welcome to the event of the future.
-            <p>
+
+    <!-- CONTENT -->
+    <div class="register">
+        <div class="rtitle">Register</div>
+        <form id="registerForm">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" class="text-input" placeholder="Enter your name" id="fullname">
+                </div>
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" class="text-input" placeholder="Enter your username" id="newUser" required autofocus>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" class="text-input" placeholder="Enter your email">
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" class="text-input" placeholder="Enter your phone number">
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="text" class="text-input" placeholder="Enter your password" id="newPass" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Confirm Password</span>
+                    <input type="text" class="text-input" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            <div class="gender-details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                    <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                    <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                </div>
+            </div>
+            <div class="buTTon">
+                <a href="account-login.html"><input type="button" onclick="register()" value="Register"></a>
+            </div>
     </div>
-    <div class="contentbox" id="ac2">
-
-        <div class="biglinkleft blcont" onclick="window.location.href = 'newsroom.html';">
-            <h2 id="newsroomtext" class="biglink">Newsroom</h2>
-        </div>
-
-        <div class="biglinkright blcont" onclick="window.location.href = 'faq.html';">
-            <h2 id="faqtext" class="biglink">FAQ</h2>
-        </div>
+    </form>
     </div>
-    <p class="redtext"><b>Please note that our hosting service, 000Webhost, appends a notice at the bottom of every page. We do not nescessarily disagree with its message, but it was not voluntarily added nor removable.</b></p>
-
     <div class="newcirc">
         <!-- <span class="dot" id="dot"></span> -->
         <nav class="dotmnu">
@@ -118,11 +159,16 @@
 
     </div>
 
+    <!-- END CONTENT -->
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/background.js"></script>
     <script async src="js/userSettings.js"></script>
     <script src="js/loadelements.js"></script>
     <script src="js/mobController.js"></script>
     <script src="js/hover.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/login.js"></script>
 </body>
 
 </html>
