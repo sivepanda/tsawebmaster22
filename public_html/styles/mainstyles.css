@@ -1056,8 +1056,12 @@ input[type="submit"]:hover {
 */
 
 #around {
+    height: 86vh;
     display: flex;
     flex-direction: row;
+    background-size: cover;
+    background-position: bottom center;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(../resources/images/concert-gffe8c231d_1920.jpg);
 }
 
 #left {
@@ -1075,11 +1079,12 @@ input[type="submit"]:hover {
 }
 
 #signin {
+    background-color: rgba(0, 0, 0, 0.671);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 30vw;
     z-index: 100;
     padding-bottom: 1rem;
     margin-top: 5vh;

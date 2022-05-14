@@ -101,8 +101,6 @@
             experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits! </p>
         <p class="mobile">Welcome to the NU_WRLD festival. The first of its kind, it is an event that truly takes advantage of the digital age, creating oppotunities for increasingly global artists to reach out to their increasingly global fanbases. We are the event of
             the future. <span>Are you ready?</span></p>
-
-        <!---->
         <a href="#ic4" id="ic1btn"><span>Learn More</span></a>
         <img id="inddownarr" onclick="window.location.href = '#ic2';" class="inddownarr" alt="downwards arrow" src="resources/images/downarr.png">
 
@@ -110,7 +108,7 @@
 
 
 
-    <section class="contentbox" id="ic2">
+    <section class="contentbox desktop" id="ic2">
         <div id="ic2h1cont">
             <h1 id="ic2h1">THE SOUND STAGE</h1>
         </div>
@@ -169,7 +167,7 @@
         </div>
         </div>
     </section>
-    <div class="contentbox " id="ic3">
+    <div class="contentbox desktop " id="ic3">
         <div id="ic3h1cont">
             <h1 id="ic3h1">THE VISUALS</h1>
         </div>
@@ -230,44 +228,65 @@
 
         </div>
     </div>
+    <section class="cardcontainer mobile" id="ic5">
+        <!-- HEY AHMAD: so I added " mobile" to all of the classes, all this does is essentially make it so that both 
+            .mobile and .PLZ apply to the object, and all .mobile does is hide the content on desktop and all .desktop does 
+            is hide it on mobile  -->
+        <div class="plzwork mobile">
+            <div class="galleryitem mobile" id="gallery0">
+                <p class="gallerylabel">Revolutionary audio and video</p>
+                <p class="gallerytext">The most technologically advanced video and audio streaming platform in existence providing the most technically immersive experience
+                    <br>5K HDR 120 fps Lossless video
+                    <br>5000 kbps studio-grade recording and streaming bitrate with 3D surround sound
+                </p>
+            </div>
+            <div class="galleryitem mobile" id="gallery1">
+                <p class="gallerylabel">Full artist creative freedom</p>
+                <p class="gallerytext">Artists have full creative freedom over their event, being fully able to tailor their set to their music, and be able to express their creative vision to their fullest potential.
+                </p>
+            </div>
+        </div>
+
+        <div class="plzwork mobile">
+            <div class="galleryitem mobile" id="gallery2">
+                <p class="gallerylabel">3D Experience</p>
+                <p class="gallerytext">Our 3DIntillis systems allow us to be able to record and steam the in 3D, providing the feeling of sitting right in front of the stage, complete with positional surround sound.
+                </p>
+            </div>
+            <div class="galleryitem mobile" id="gallery3">
+                <p class="gallerylabel">Affordable price</p>
+                <p class="gallerytext">As a virtual event, you can be freed from the extensive costs of traveling to a venue. The cost of the event itself is also significantly cheaper than traditional festivals, so your wallet can have just as much fun as you!</p>
+            </div>
+        </div>
+
+        <a href="book.html" class="fancybook">Enter The Nu_Wrld And Book Now</a>
+
+    </section>
     <section class="cardcontainer" id="ic4">
-        <div class="card2" id="eventic4">
+        <div class="card2 desktop" id="eventic4">
 
             <div class="card-image card-1"></div>
             <div class="cardh1cont">
                 <h1>THE EVENTS</h1>
-
             </div>
             <p class="desktop">NU_WRLD has a wide selection of ways you can attend events. You can opt for a more traditional 2D streaming affair while still being able to take advantage of our room-filling and revolutionary Intillis Novis video and audio codecs, or you
                 can opt for a more immersive 3D experience, allowing you to fully indulge yourself in the creative mindsets of your favorite artists. We do this at no overly inflated cost. We make sure our event prices are always accessible for every
                 price point, and that every event tier is fairly and competitively priced. We enable you to attend events for a price far more affordable than a physical festival, while still delivering a similar experience.
             </p>
-            <div class="plzwork">
-                <div class="PLZ" id="plz1">
-                    <p>Revolutionary audio and video</p>
-                </div>
-                <div class="PLZ" id="plz2">
-                </div>
-            
-            
-                <div class="PLZ">
-                    sldjbsldjvbskdjvbskb
-                </div>
-                <div class="PLZ">
-                </div>
-            </div>
+
+
+            <a href="book.html" class="glowbtn desktop" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Book Now</span></a>
+            <!-- 
             <p class="mobile" id="toi1">
                 <i class="fa-regular fa-circle-play"></i> <b>Revoutionary</b> audio and video:
-                <!-- <br> <i class="fa-regular fa-eye"></i> 3D experience <b>unlike any other</b> -->
+                 <br> <i class="fa-regular fa-eye"></i> 3D experience <b>unlike any other</b> 
                 <br> <i class="fa-regular fa-paper-plane"></i> <b>Full</b> artist creative freedom:
                 <br> <i class="fa-regular fa-money-bill-1"></i> Affordable prices at <b>all ranges:</b>
-            </p>
-            <!-- <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Book Now</span></a> -->
+            </p>-->
+
         </div>
-        <div class="newbtn"> <!--Yo you broke the button on desktop fix plz-->
-            <button class="booknow"><b>Book </b><span>Now</span></button>
-        </div>
-       
+
+
         <div class="card2" id="artistic4">
 
             <div class="card-image card-2"></div>
@@ -289,19 +308,19 @@
             </p>
             <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Our Roster</span></a>
         </div>
-        <div class="hotnew">
-            <div id="showcase">
-                <div id="right">
-                    <div id="showcase">
-                        <div class="showcase-content">
-                            <h1 class="showcase-text"><strong>Hot</strong> New Artist This Week</h1>
-                            <a href="#" class="secondary-btn">Check Him Out</a>
-                        </div>
+        <div class="hotnew contentbox mobile" id="ic6">
+            <div id="right">
+                <div id="showcase">
+                    <div class="showcase-content">
+                        <h1 class="showcase-text"><strong>Hot</strong> New Artist This Week</h1>
+                        <a href="#" class="secondary-btn">Check Them Out</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
+
     <div class="newcirc">
         <!-- <span class="dot" id="dot"></span> -->
         <nav class="dotmnu">

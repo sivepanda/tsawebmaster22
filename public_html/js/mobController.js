@@ -34,7 +34,7 @@ function resizeWindow() {
     var width = window.innerWidth;
     console.log("window size ratio: " + width / height);
 
-    if ((width / height) > (7/6)) {
+    if ((width / height) > (7 / 6)) {
         isMobile = false;
         styles.setAttribute('href', dtstyles);
         changeElementIDDisplay("hamburger", "none");
@@ -152,8 +152,19 @@ window.addEventListener('load', (event) => {
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.dotmnu');
     const mobile_list = document.querySelector(".newcirc");
-    const new_mob = document.querySelector('.plzwork')
-    const newpic = document.getElementById("plz1");
+    // const rev_pic = document.getElementById("plz1") ?  document.getElementById("plz1") : false;
+    var gallerypic = []
+    if (document.getElementById("gallery0")) {
+        for (var i = 0; i < 4; i++) {
+            let galleryn = document.getElementById("gallery" + i);
+            galleryn.addEventListener('click', function() {
+                galleryn.classList.toggle('go');
+            });
+            gallerypic[i] = galleryn;
+
+        }
+    }
+    const botpic_two = document.getElementById("plz4");
     const head = document.getElementById("header");
     if (isMobile) {
         head.style.width = 100 + "vw";
@@ -164,12 +175,6 @@ window.addEventListener('load', (event) => {
     ic1Logo ? initialLogoHeight = ic1Logo.offsetHeight : console.log("not index");
     const ic3bp = document.getElementById("ic3bp");
     ic3bp ? initialTextIBP3Height = ic3bp.offsetHeight : console.log("not index");
-
-
-    new_mob.addEventListener('click', function(){
-        new_mob.classList.toggle('go');
-        newpic.classList.toggle('go');
-    });
 
     menu_btn.addEventListener('click', function() {
         // head.style.width = 100 + "vw";
