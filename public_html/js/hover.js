@@ -5,7 +5,6 @@ if (!isMobile) {
     var small = "5vh"
     var large = "10vh"
 
-
     window.onload = function() {
         left[0].style.opacity = "1";
         right[0].style.opacity = "1";

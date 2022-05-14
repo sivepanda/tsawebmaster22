@@ -42,11 +42,11 @@
             left: 0;
         }
         
-        h1 {
-            margin: 0 0 10px;
-            padding: 0;
-            color: white;
-            font-size: 24px;
+        .redtext {
+            background-color: rgb(70, 70, 70);
+            color: red;
+            text-align: center;
+            margin-top: 5vh;
         }
     </style>
 </head>
@@ -58,10 +58,11 @@
                 <source src="resources/videos/nw_loading.mp4" type="video/mp4">
               </video>
         </div>
+
     </div>
     <button class="hamburger" id="hamburger" onclick=toggleMenu()>
-            <div class="bar"></div>
-        </button>
+        <div class="bar"></div>
+    </button>
     <div class="header" id="header">
         <div class="empty"></div>
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
@@ -82,31 +83,73 @@
         <a href="attributes.html ">ATTRIBUTES</a>
         <a href="about.html ">ABOUT</a>
     </nav>
-    <h1 class="heading">FAQ</h1>
-    <h4 class="animheading">Have Questions? We've got you.</h4>
-    <button class="collapsible">What will the viewing experience be like?</button>
-    <div class="content">
-        <p>As far as the display goes, it depends on the package you purchased. Generally, you will be using your own personal display. If you buy our VR package, you will be sent a VR headset of your choice. The creative process of the concert will depend
-            entirely on the artist, however. </p>
+    <!-- </div> -->
+
+
+    <!-- CONTENT -->
+    <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
     </div>
-    <button class="collapsible">How long before an event do the tickets become available for purchase? How will I know about this info if I want to be one of the first to buy a ticket?</button>
-    <div class="content">
-        <p>The timing of when an event goes live depends on the artist and when they decide to make the information public, however, through our catalog of artists you can select the ones you would like to be alerted about and will receive a notification
-            whenever they decide to have an event.</p>
-    </div>
-    <button class="collapsible">Global events were mentioned, how does that work?</button>
-    <div class="content">
-        <p>Through us you will be able to experience any digitized music event commissioned to us by an artist. We are truly global meaning you can watch an event from anywhere with high quality and amazing sound, using our state-of-the-art lossless streaming
-            codecs.
-        </p>
-    </div>
-    <div class="box">
-        <form>
-            <input type="text" name="" placeholder="Enter Your Own Question">
-            <input type="submit" name="" value="Ask">
-        </form>
+    <div id="around">
+        <div id="left">
+            <div id="signin">
+                <h1 id="output">Sign in</h1>
+                <form>
+                    <div>
+                        <label class="mail">Email or username</label>
+                        <input type="text" class="text-input" id="user" />
+                    </div>
+                    <div>
+                        <label class="mail">Password</label>
+                        <input type="password" class="text-input" id="pass" />
+                    </div>
+                    <button type="button" class="primary-btn" onclick="checkUserLS()">Sign In</button>
+                </form>
+                <div class="links">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <div class="or">
+                    <hr class="bar">
+                    <span>OR</span>
+                    <hr class="bar">
+                </div>
+                <a href="account-register.html" class="secondary-btn">Create an account</a>
+
+                <footer id="main-footer">
+                    <p>Copyright &copy; 2022, NuWrld All Rights Reserved</p>
+                    <div>
+                        <a href="#">Terms Of Use</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!--  
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+                    <h1 class="showcase-text"><strong>Hot</strong> New Artist This Week</h1>
+                    <a href="#" class="secondary-btn">Check Him Out</a>
+                </div>
+            </div>
+        </div>-->
     </div>
 
+    <!--
+    <div class="cotentbox">
+        <div class="loginForm">
+            <h1 style="text-align: center">LOGIN</h1>
+            <form>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="john.doe@thenuwrld.com" required autofocus><br>
+                <label for="pword">Password:</label><br>
+                <input type="password" id="pword" name="pword" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>-->
+
+    <!-- END CONTENT -->
     <div class="newcirc">
         <!-- <span class="dot" id="dot"></span> -->
         <nav class="dotmnu">
@@ -120,14 +163,12 @@
         </nav>
 
     </div>
-    <script src="js/mobController.js"></script>
-    <script async src="js/loadelements.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/background.js"></script>
     <script async src="js/userSettings.js"></script>
-    <script src="js/collapsibleController.js"></script>
+    <script src="js/loadelements.js"></script>
+    <script src="js/mobController.js"></script>
+    <script src="js/hover.js"></script>
+    <script src="js/login.js"></script>
 </body>
-
-
-
-</html>
-
-<!--SFHS TSA 2020-->

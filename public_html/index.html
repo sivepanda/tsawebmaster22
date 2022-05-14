@@ -3,6 +3,8 @@
 
 <head>
     <meta name="viewport" id="viewport-meta" content="width=device-width, height=device-height">
+    <script src="https://kit.fontawesome.com/07f5345973.js" crossorigin="anonymous"></script>
+
     <style>
         .loadtank {
             position: fixed;
@@ -60,13 +62,16 @@
         </div>
 
     </div>
+
     <button class="hamburger" id="hamburger" onclick=toggleMenu()>
         <div class="bar"></div>
     </button>
     <div class="header" id="header">
         <div class="empty"></div>
+
         <img class="supp" src="resources/images/information.png" alt="attributes" onclick="window.location.href = 'attributes.html';">
         <img class="logo" id="mainlogoind" alt="logo" onclick="window.location.href = 'index.html';">
+        <img class="acc" src="resources/images/account.png" alt="account" onclick="window.location.href = 'account-login.html';">
         <ul id="navbar" class='indnav'>
             <li><a href="index.html">HOME</a></li>
             <li><a href="events.html">EVENTS</a></li>
@@ -74,28 +79,36 @@
             <li><a href="about.html">ABOUT</a></li>
         </ul>
 
+
+
     </div>
     <nav class="mobile-nav" id="mobile-nav">
-        <a href="index.html ">HOME</a>
-        <a href="events.html ">EVENTS</a>
-        <a href="contact.html ">CONTACT</a>
-        <a href="attributes.html ">ATTRIBUTES</a>
-        <a href="about.html ">ABOUT</a>
+
+        <a href="index.html">HOME</a></li>
+        <a href="events.html">EVENTS</a></li>
+        <a href="contact.html">CONTACT</a></li>
+        <a href="attributes.html">ATTRIBUTES</a></li>
+        <a href="about.html">ABOUT</a></li>
+        <!-- <img class="acc" src="resources/images/account.png" alt="account" onclick="window.location.href = 'account-login.html';"> -->
     </nav>
+
     <section class="contentbox" id="ic1">
         <img id="ic1logo" class="logo" alt="logo" src="resources/images/nw22.png">
-        <h1 id="ic1h1">The NU_WRLD</h1>
+        <h1 id="ic1h1">The <br class="mobile"><span>NU_WRLD</span></h1>
         <p class="desktop">Welcome to the NU_WRLD_22 festival. This is a new-age digital event that caters to an increasingly globalized network of artists and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary
-            augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world! No longer do you have to worry about passports, event tickets, and your health to experience a festival
-            and its experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits! </p>
+            augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary augmented
+            reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world! No longer do you have to worry about passports, event tickets, and your health to experience a festival and its
+            experiences as you watch your favorite artists take the stage! Welcome to the NU_WRLD, where there are no limits! </p>
         <p class="mobile">Welcome to the NU_WRLD festival. The first of its kind, it is an event that truly takes advantage of the digital age, creating oppotunities for increasingly global artists to reach out to their increasingly global fanbases. We are the event of
             the future. <span>Are you ready?</span></p>
-        <!--and their increasingly global fanbases, bringing them together using the power of technology. We use revolutionary
-        augmented reality technologies to bring you directly to a virtual stage that will host all of your favorite artists from around the world!-->
         <a href="#ic4" id="ic1btn"><span>Learn More</span></a>
         <img id="inddownarr" onclick="window.location.href = '#ic2';" class="inddownarr" alt="downwards arrow" src="resources/images/downarr.png">
+
     </section>
-    <section class="contentbox" id="ic2">
+
+
+
+    <section class="contentbox desktop" id="ic2">
         <div id="ic2h1cont">
             <h1 id="ic2h1">THE SOUND STAGE</h1>
         </div>
@@ -154,7 +167,7 @@
         </div>
         </div>
     </section>
-    <div class="contentbox " id="ic3">
+    <div class="contentbox desktop " id="ic3">
         <div id="ic3h1cont">
             <h1 id="ic3h1">THE VISUALS</h1>
         </div>
@@ -215,20 +228,65 @@
 
         </div>
     </div>
+    <section class="cardcontainer mobile" id="ic5">
+        <!-- HEY AHMAD: so I added " mobile" to all of the classes, all this does is essentially make it so that both 
+            .mobile and .PLZ apply to the object, and all .mobile does is hide the content on desktop and all .desktop does 
+            is hide it on mobile  -->
+        <div class="plzwork mobile">
+            <div class="galleryitem mobile" id="gallery0">
+                <p class="gallerylabel">Revolutionary audio and video</p>
+                <p class="gallerytext">The most technologically advanced video and audio streaming platform in existence providing the most technically immersive experience
+                    <br>5K HDR 120 fps Lossless video
+                    <br>5000 kbps studio-grade recording and streaming bitrate with 3D surround sound
+                </p>
+            </div>
+            <div class="galleryitem mobile" id="gallery1">
+                <p class="gallerylabel">Full artist creative freedom</p>
+                <p class="gallerytext">Artists have full creative freedom over their event, being fully able to tailor their set to their music, and be able to express their creative vision to their fullest potential.
+                </p>
+            </div>
+        </div>
+
+        <div class="plzwork mobile">
+            <div class="galleryitem mobile" id="gallery2">
+                <p class="gallerylabel">3D Experience</p>
+                <p class="gallerytext">Our 3DIntillis systems allow us to be able to record and steam the in 3D, providing the feeling of sitting right in front of the stage, complete with positional surround sound.
+                </p>
+            </div>
+            <div class="galleryitem mobile" id="gallery3">
+                <p class="gallerylabel">Affordable price</p>
+                <p class="gallerytext">As a virtual event, you can be freed from the extensive costs of traveling to a venue. The cost of the event itself is also significantly cheaper than traditional festivals, so your wallet can have just as much fun as you!</p>
+            </div>
+        </div>
+
+        <a href="book.html" class="fancybook">Enter The Nu_Wrld And Book Now</a>
+
+    </section>
     <section class="cardcontainer" id="ic4">
-        <div class="card2" id="eventic4">
+        <div class="card2 desktop" id="eventic4">
 
             <div class="card-image card-1"></div>
             <div class="cardh1cont">
                 <h1>THE EVENTS</h1>
-
             </div>
-            <p>NU_WRLD has a wide selection of ways you can attend events. You can opt for a more traditional 2D streaming affair while still being able to take advantage of our room-filling and revolutionary Intillis Novis video and audio codecs, or you
+            <p class="desktop">NU_WRLD has a wide selection of ways you can attend events. You can opt for a more traditional 2D streaming affair while still being able to take advantage of our room-filling and revolutionary Intillis Novis video and audio codecs, or you
                 can opt for a more immersive 3D experience, allowing you to fully indulge yourself in the creative mindsets of your favorite artists. We do this at no overly inflated cost. We make sure our event prices are always accessible for every
                 price point, and that every event tier is fairly and competitively priced. We enable you to attend events for a price far more affordable than a physical festival, while still delivering a similar experience.
             </p>
-            <a href="book.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Book Now</span></a>
+
+
+            <a href="book.html" class="glowbtn desktop" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Book Now</span></a>
+            <!-- 
+            <p class="mobile" id="toi1">
+                <i class="fa-regular fa-circle-play"></i> <b>Revoutionary</b> audio and video:
+                 <br> <i class="fa-regular fa-eye"></i> 3D experience <b>unlike any other</b> 
+                <br> <i class="fa-regular fa-paper-plane"></i> <b>Full</b> artist creative freedom:
+                <br> <i class="fa-regular fa-money-bill-1"></i> Affordable prices at <b>all ranges:</b>
+            </p>-->
+
         </div>
+
+
         <div class="card2" id="artistic4">
 
             <div class="card-image card-2"></div>
@@ -236,16 +294,51 @@
             <div class="cardh1cont">
                 <h1>THE ARTISTS</h1>
             </div>
-            <p>With many artists bringing talent from around the globe, NU_WRLD offers a truly connecting experience, allowing artists from all over the world to connect with fans located on all corners of the globe. This allows for meaningful and valuable
+            <p class="desktop">With many artists bringing talent from around the globe, NU_WRLD offers a truly connecting experience, allowing artists from all over the world to connect with fans located on all corners of the globe. This allows for meaningful and valuable
                 experiences to be equally accessible to anyone with an internet connection, regardless of location. Not only that, our dedicated team of software engineers and graphics designers ensure that the full scope of an artist’s vision is realized.
                 We bring together critically acclaimed international artists who otherwise may have a difficult time expanding their reach, give them a platform and tools to expand their reach and creative vision, all to bring you an event of a lifetime.
             </p>
-            <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Learn More</span></a>
+            <p class="mobile" id="toi2">
+
+                <i class="fa-regular fa-map"></i> <b>Worldwide</b> Talent and Audiences
+
+                <br> <i class="fa-regular fa-gem"></i> <b>Critically acclaimed</b> artists
+                <br> <i class="fa-regular fa-hand-peace"></i> <b>Independent</b> artists
+                <br> <i class="fa-regular fa-lightbulb"></i> A platform to expand a <b>creative vision</b>
+            </p>
+            <a href="artists.html" class="glowbtn" id="bookbtn" style="font-family: 'Barlow Condensed', sans-serif;"><span>Our Roster</span></a>
         </div>
+        <div class="hotnew contentbox mobile" id="ic6">
+            <div id="right">
+                <div id="showcase">
+                    <div class="showcase-content">
+                        <h1 class="showcase-text"><strong>Hot</strong> New Artist This Week</h1>
+                        <a href="#" class="secondary-btn">Check Them Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
+
+    <div class="newcirc">
+        <!-- <span class="dot" id="dot"></span> -->
+        <nav class="dotmnu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="attributes.html">Attributes</a></li>
+            </ul>
+        </nav>
+
+    </div>
 </body>
 
-<script async="true " src="js/loadelements.js"></script>
+
+<script async="true" src="js/loadelements.js"></script>
+<script src="js//libraries/md5.min.js"></script>
 <script async src="js/mobController.js"></script>
 <script async src="js/userSettings.js"></script>
 

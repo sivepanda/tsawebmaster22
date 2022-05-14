@@ -3,138 +3,137 @@
     margin: 0;
     padding: 0;
     /*background-color: grey;*/
-}   
+}
 
-.mobile-nav {
-    opacity: 0;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0px;
+body {
+    background-color: black;
+    color: white;
+    font-family: "michroma";
 }
 
 .mobile-nav a{
-    font-weight: 0;
-    font-size: 0px;
-    color: white;
     text-decoration: none;
 }
 
-.header{
-    background-color: #1B1212;
-    height: 80px;
-}
-.header img{
-    display: inline-block;
-    background-color: #1B1212;
-}
-
-.supp{
-    opacity: 0;
-    align-items: right;
-    max-width: 30px;
-    position: relative;
-    left: 440px;
+.mobile-nav{
+    padding: 0 20px;
+    background-color: grey;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo{
-    max-width: 150px;
-    position: relative;
-    left: 130px;
-    top: 10px;
+#ic1 #ic1logo {
+    display: none;
 }
 
-.hamburger {
-    /*width: 50px;*/
-    margin-top: 3vh;
-    margin-left: 6vw;
-    position: fixed;
-    /* position: relative; */
-    /* margin-top: -7vw; */
-    display: block;
-    width: 33px;
+.contentbox .desktop{
+    display: none;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.menumenu{
+    background-color: grey;
+    float: right;
+    height: 25px;
+    width: 20vw;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     cursor: pointer;
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
-    z-index: 10;
-    /* margin-left: 92vw; */
 }
 
-.hamburger .bar,
-.hamburger:after,
-.hamburger:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: white;
-    margin: 6px 0px;
-    transition: 0.4s;
-    z-index: 2;
+.menulogo1{
+    height: 3px;
+    width: 30px;
+    background-color: snow;
 }
 
-.hamburger.is-active:before {
-    transform: rotate(-45deg) translate(-8px, 6px);
+.menulogo2{
+    height: 3px;
+    width: 30px;
+    background-color: snow;
 }
 
-.hamburger.is-active:after {
-    transform: rotate(45deg) translate(-9px, -8px);
+.menulogo3{
+    height: 3px;
+    width: 30px;
+    background-color: snow;
 }
 
-.hamburger.is-active .bar {
-    background-color: rgba(0, 0, 0, 0);
-    transform: translateY(30px);
+.mobilebtn{
+    position: absolute;
+    top: 80%;
+    left:50%;
+    transform: translate(-50%, 50%);
 }
 
-h1{
+.BTN{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    font-size: 17px;
+    color: var(--indicator-color-active);
+    font-family: poppins;
+    font-weight: 400;
+    border: 0 solid var(--indicator-color-active);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px 0 var(--indicator-color-active) inset, 0 5px 15px 0 var(--indicator-color-active),
+                0 5px 15px 0 var(--indicator-color-active) inset, 0 5px 15px 0 var(--indicator-color-active);
+    text-shadow: 0 0 5px var(--indicator-color-active), 0 0 5px var(--indicator-color-active);
+}
+
+
+.menu{
+    background-color: grey;
+    width: 66%;
+    height: 100vh;
+    padding: 50px;
+    transform: translateX(-500px);
+    transition: 0.5s;
+}
+
+.menu li{
+    list-style-type: none;
+    border-bottom: 1px solid #AAFF00;
+    padding: 30px 0;
     text-align: center;
 }
 
-.contentbox {
-    height: 620px;
-}
-.contentbox h1{
-    position: relative;
-    margin-top: 0px;
-    color: white;
-    margin-bottom: 0px;
-    font-size: 50px;
+.menu li:last-child{
+    border-bottom: none;
 }
 
-.contentbox .comp{
-    margin-top: 30px;
-    margin-bottom: 120px;
-    margin-left: 30px;
-    margin-right: 20px;
+.menu li:first-child a{
+    font-weight: bold;
+}
+
+.menu li a{
+    color: snow;
+    text-decoration: none;
     font-size: 25px;
-    color: white;
-    width: 34ch;
-    line-height: 1.5em;
+    transition: font-weight 0.2s;
 }
 
-#ic1 {
-    background-image: url("../resources/images/audience-g92176bc73_1920.jpg");
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0);
-
+.menu li a:hover{
+    font-weight: bold;
 }
 
-.comp span{
-    position: relative;
-    display: block;
-    top: 50px;
-    font-size: 30px;
-    color: #32CD32;
-    text-align: center;
-    width: 27rem;
-    animation: limits linear 3s;
+.showmenu{
+    transform: translateX(0);
 }
 
-@keyframes limits {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
+@media screen and (max-width: 600px){
+    .menu li a{
+        font-size: 20px;
+    }
 }
