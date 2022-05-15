@@ -101,10 +101,12 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]::after {
     content: '';
     position: absolute;
+    top: -webkit-calc(50% - 2px);
     top: calc(50% - 2px);
     width: 4px;
     height: 4px;
     border-radius: 50%;
+    left: -webkit-calc(65px + 40px);
     left: calc(65px + 40px);
     background-color: var(--indicator-color-active);
     box-shadow: 0 0 5px var(--indicator-color-active), 0 0 15px var(--indicator-color-active), 0 0 30px var(--indicator-color-active);
@@ -925,8 +927,10 @@ h4 {
     content: "";
     position: absolute;
     height: 0.5vh;
+    left: -webkit-calc(var(--padding)*-1);
     left: calc(var(--padding)*-1);
     bottom: -1vh;
+    width: -webkit-calc(100% + var(--padding));
     width: calc(100% + var(--padding));
     background: var(--light-green);
     transform: scaleX(0);
@@ -1329,6 +1333,7 @@ input[type="submit"]:hover {
 
 form .user-details .input-box {
     margin: 20px 0 12px 0;
+    width: -webkit-calc(100% / 2 - 20px);
     width: calc(100% / 2 - 20px);
 }
 

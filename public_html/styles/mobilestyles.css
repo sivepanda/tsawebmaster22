@@ -412,7 +412,7 @@ b {
 .hamburger:before {
     content: '';
     display: block;
-    width: 100%;
+    width: 40px;
     height: 4px;
     background-color: white;
     margin: 6px 0px;
@@ -424,7 +424,7 @@ b {
 .hamburger.is-active:before {
     background-color: var(--light-green);
     /* border-radius: 10px; */
-    transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-7px, 5px);
 }
 
 .hamburger.is-active:after {
@@ -434,7 +434,7 @@ b {
 }
 
 .hamburger .bar {
-    width: 60%;
+    width: 30px;
 }
 
 .hamburger.is-active .bar {
@@ -549,6 +549,7 @@ b {
 }
 
 .dotmnu.is-active {
+    margin-left: -webkit-calc(( (175vh / 2) - 50vw));
     margin-left: calc(( (175vh / 2) - 50vw));
     transition: 300ms all ease-in-out;
     bottom: 97vh;
@@ -628,10 +629,12 @@ b {
 }
 
 .newcirc.is-active {
+    z-index: 400;
     /* display: inline-block; */
     height: 175vh;
     width: 175vh;
     margin-bottom: -87.5vh;
+    margin-left: -webkit-calc(50vw - (175vh / 2));
     margin-left: calc(50vw - (175vh / 2));
     transition: 300ms all ease-in-out;
     /* transform: rotate(-0.25turn); */
@@ -1152,7 +1155,10 @@ h3 {
 }
 
 #ic5 {
+    height: -webkit-calc(100vw + 10vh);
     height: calc(100vw + 10vh);
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .card2 {
@@ -1165,6 +1171,7 @@ h3 {
 }
 
 .fancybook {
+    margin-top: -webkit-calc(100vw + 3vh);
     margin-top: calc(100vw + 3vh);
     margin-left: auto;
     margin-right: auto;
@@ -1195,6 +1202,8 @@ h3 {
     margin-top: 45%;
     font-family: 'Michroma', 'sans serif';
     padding-top: 0%;
+    padding-left: 4vw;
+    padding-right: 4vw;
     font-size: 100%;
     text-transform: uppercase;
     font-weight: 300;
@@ -1213,6 +1222,10 @@ h3 {
     transition: all 0.4s cubic-bezier(.41, .01, 0, 1.01);
 }
 
+#gallery0 .gallerylabel {
+    font-size: 3vw;
+}
+
 #gallery1 {
     font-size: 3.5vw;
     position: absolute;
@@ -1223,6 +1236,10 @@ h3 {
     background-position: right center;
     z-index: 1;
     transition: all 0.4s cubic-bezier(.41, .01, 0, 1.01);
+}
+
+#gallery1 .gallerylabel {
+    font-size: 4vw;
 }
 
 #gallery2 {
@@ -1237,6 +1254,10 @@ h3 {
     transition: all 0.4s cubic-bezier(.41, .01, 0, 1.01);
 }
 
+#gallery2 .gallerylabel {
+    font-size: 4vw;
+}
+
 #gallery3 {
     font-size: 4vw;
     position: absolute;
@@ -1248,6 +1269,10 @@ h3 {
     background-position: right center;
     z-index: 1;
     transition: all 0.4s cubic-bezier(.41, .01, 0, 1.01);
+}
+
+#gallery3 .gallerylabel {
+    font-size: 4vw;
 }
 
 .galleryitem {
@@ -1285,6 +1310,9 @@ h3 {
 }
 
 #gallery0.go .gallerylabel {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 6vw;
     margin-top: 10%;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1294,7 +1322,7 @@ h3 {
     padding-left: 2vw;
     padding-right: 2vw;
     margin-top: 3vh;
-    font-size: 3vh;
+    font-size: 5vw;
     margin-top: 3vh;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1309,12 +1337,16 @@ h3 {
     align-items: top;
     height: 90vw;
     width: 90vw;
-    margin-left: 10vw;
+    margin-left: -webkit-calc(10vw - 10px);
+    margin-left: calc(10vw - 10px);
     z-index: 5;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
 
 #gallery1.go .gallerylabel {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 6vw;
     margin-top: 10%;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1324,7 +1356,7 @@ h3 {
     padding-left: 2vw;
     padding-right: 2vw;
     margin-top: 3vh;
-    font-size: 3vh;
+    font-size: 5vw;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
 
@@ -1344,6 +1376,9 @@ h3 {
 }
 
 #gallery2.go .gallerylabel {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 6vw;
     margin-top: 10%;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1353,7 +1388,7 @@ h3 {
     padding-left: 2vw;
     padding-right: 2vw;
     margin-top: 3vh;
-    font-size: 3vh;
+    font-size: 6vw;
     margin-top: 3vh;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1367,7 +1402,8 @@ h3 {
     justify-content: top;
     align-items: top;
     margin-top: 10vw;
-    margin-left: 10vw;
+    margin-left: -webkit-calc(10vw - 10px);
+    margin-left: calc(10vw - 10px);
     height: 90vw;
     width: 90vw;
     z-index: 5;
@@ -1375,6 +1411,9 @@ h3 {
 }
 
 #gallery3.go .gallerylabel {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 5vw;
     margin-top: 10%;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1384,7 +1423,7 @@ h3 {
     padding-left: 2vw;
     padding-right: 2vw;
     margin-top: 3vh;
-    font-size: 3vh;
+    font-size: 6vw;
     margin-top: 3vh;
     transition: all 0.4s cubic-bezier(.53, .01, 0, 1.02);
 }
@@ -1919,8 +1958,10 @@ input[type="submit"]:hover {
     content: "";
     position: absolute;
     height: 0.5vh;
+    left: -webkit-calc(var(--padding)*-1);
     left: calc(var(--padding)*-1);
     bottom: -1vh;
+    width: -webkit-calc(100% + var(--padding));
     width: calc(100% + var(--padding));
     background: rgb(0, 168, 22);
 }
@@ -2276,6 +2317,7 @@ input {
 
 form .user-details .input-box {
     margin: 20px 0 12px 0;
+    width: -webkit-calc(100% / 2 - 20px);
     width: calc(100% / 2 - 20px);
 }
 
