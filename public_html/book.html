@@ -75,6 +75,10 @@
         <img class="acc" src="resources/images/account.png" alt="account" onclick="window.location.href = 'account-login.html';">
 
     </div>
+
+    <p id="herberg">x</p>
+    <button type="button" class="primary-btn" onclick='ch()'>Test</button>
+
     <div class="newcirc">
         <!-- <span class="dot" id="dot"></span> -->
         <nav class="dotmnu">
@@ -88,11 +92,22 @@
         </nav>
 
     </div>
-    <script type="text/javascript" src="https://form.jotform.com/jsform/213611447042042"></script>
+    <script src="js/Event.js"></script>
+    <script src="js/loadevents.js"></script>
+    <script src="js/book.js"></script>
+    <script src="js/userdata.js"></script>
+    <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/213611447042042"></script> -->
+    <script src="js/libraries/jquery-3.6.0.min.js"></script>
     <script src="js/loadelements.js"></script>
-    <script src="js/formcontroller.js"></script>
+    <!-- <script src="js/formcontroller.js"></script> -->
     <script async src="js/userSettings.js"></script>
     <script src="js/mobController.js"></script>
+    <script>
+        function ch() {
+            addBookedEvent();
+            // document.getElementById("herberg").innerHTML = localStorage.getItem("event") + " " + localStorage.getItem("tier") + " " + localStorage.getItem("vr");
+        }
+    </script>
 </body>
 
 </html>

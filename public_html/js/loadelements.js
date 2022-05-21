@@ -6,7 +6,7 @@ var header = document.getElementById("header").children;
 header[2].src = "resources/images/nw22.png";
 console.log('loaded desktop logo');
 
-var mobHeader = document.getElementById("mobile-nav").children;
+// var mobHeader = document.getElementById("mobile-nav").children;
 header[2].src = "resources/images/nw22.png";
 console.log('loaded mobile logo');
 //load fonts
@@ -107,6 +107,7 @@ function loaded() {
         load.remove();
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
+        window.scrollTo(0, 0);
         if (width > height) {
             document.body.addEventListener('scroll', function(e) {
                 var progressbar = document.getElementById('progressbar');
@@ -128,22 +129,22 @@ function elementInViewport(el) {
     var left = el.offsetLeft;
     var width = el.offsetWidth;
     var height = el.offsetHeight;
-  
-    while(el.offsetParent) {
-      el = el.offsetParent;
-      top += el.offsetTop;
-      left += el.offsetLeft;
-    }
-  
-    return (
-      top >= window.pageYOffset &&
-      left >= window.pageXOffset &&
-      (top + height) <= (window.pageYOffset + window.innerHeight) &&
-      (left + width) <= (window.pageXOffset + window.innerWidth)
-    );
-  }
 
- /* 
+    while (el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+    }
+
+    return (
+        top >= window.pageYOffset &&
+        left >= window.pageXOffset &&
+        (top + height) <= (window.pageYOffset + window.innerHeight) &&
+        (left + width) <= (window.pageXOffset + window.innerWidth)
+    );
+}
+
+/* 
 var cards = document.getElementsByClassName("telemetryheading");
 document.body.addEventListener('scroll', function(e) {
     for (i = 0, i < cards.length, i++) {

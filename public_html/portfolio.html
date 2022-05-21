@@ -57,32 +57,10 @@
 </head>
 
 <body>
-    <div class="loadtank" id="loadtank">
-        <div class="video-container">
-            <video muted loop infinite autoplay id="promo" class="loadingvid">
-                <source src="resources/videos/nw_loading.mp4" type="video/mp4">
-              </video>
-        </div>
-    </div>
-    <h1 class="heading"><mark>Portfolio</mark></h1>
-    <p class="subtext">Also accessible via <a href="../TSA Webmaster 2020-21/pow1.pdf">Google Drive</a></p>
-    <button class="collapsible">Plan Of Work</button>
-    <div class="content">
-        <p><a href="" onclick="window.open('portfolio/pow1.pdf', '_blank');">Page 1</a>
-            <br>
-            <p><a href="" onclick="window.open('portfolio/pow2.pdf', '_blank');">Page 2</a>
-                <br>
-                <p><a href="" onclick="window.open('portfolio/pow3.pdf', '_blank');">Page 3</a>
-                </p>
-    </div>
-    <button class="collapsible">Copyright Checklist</button>
-    <div class="content">
-        <p><a href="" onclick="window.open('portfolio/scc.pdf', '_blank');">Copyright Checklist</a></p>
-    </div>
-    <button class="collapsible">LEAP Report</button>
-    <div class="content">
-        <p><a href="" onclick="window.open('portfolio/leap-report.pdf', '_blank');">LEAP Report</a></p>
-    </div>
+
+    <p id="herberg"></p>
+    <button type="button" class="primary-btn" onclick="addBookedEvent()">Test</button>
+
     <div class="newcirc">
         <!-- <span class="dot" id="dot"></span> -->
         <nav class="dotmnu">
@@ -97,6 +75,7 @@
 
     </div>
 
+    <script src="js/userdata.js"></script>
     <script src="js/loadelements.js"></script>
     <script src="js/mobController.js"></script>
     <script async src="js/userSettings.js"></script>
