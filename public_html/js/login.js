@@ -72,24 +72,15 @@ function encrypt(toEncrypt) {
 
 function checkUser() {
     var user = document.getElementById("user").value;
-    var pass = document.getElementById("pass").value;
-
-    document.getElementById("output") ? document.getElementById("output").innerHTML = "Welcome, " + document.getElementById("user").value : console.log("sad");
-
-
-    return (user == getAndParseCookie("user").username && pass == getAndParseCookie("user").password) ? true : false;
-}
-
-function checkUserLS() {
-    var user = document.getElementById("user").value;
-    var pass = document.getElementById("pass").value;
+    var pass = encrypt(document.getElementById("pass").value);
 
     i = 0;
-    while(localStorage.getItem("user" + i) != null) {
-        if(JSON.parse(localStorage.getItem("user" + i)).username == user) {
-            if(pass == JSON.parse(localStorage.getItem("user" + i)).password) {
-                localStorage.setItem("currentUser", ("user" + i))
-                document.getElementById("output").innerHTML = "Welcome, " + JSON.parse(localStorage.getItem("user" + i)).fullname; 
+    while (cookieExists("user" + i)) {
+        if (getAndParseCookie(user + i)) {
+            if (pass = getAndParseCookie(user + i).password) {
+                setCookie("currentUser", ("user" + i));
+                document.getElementById("output").innerHTML = "Welcome, " + getAndParseCookie("user" + i).fullname;
+                window.open("your-events.html", "_self");
                 return true;
             } else {
                 document.getElementById("output").innerHTML = "Incorrect Password";
@@ -99,7 +90,34 @@ function checkUserLS() {
             i++;
         }
     }
-    document.getElementById("output").innerHTML = "User does not exist"; 
+    document.getElementById("output").innerHTML = "User does not exist";
+    return false;
+    //document.getElementById("output") ? document.getElementById("output").innerHTML = "Welcome, " + document.getElementById("user").value : console.log("sad");
+    //return (user == getAndParseCookie("user").username && pass == getAndParseCookie("user").password) ? true : false;
+}
+
+function checkUserLS() {
+    var user = document.getElementById("user").value;
+    var pass = encrypt(document.getElementById("pass").value);
+
+    i = 0;
+    while (localStorage.getItem("user" + i) != null) {
+        if (JSON.parse(localStorage.getItem("user" + i)).username == user) {
+            if (pass == JSON.parse(localStorage.getItem("user" + i)).password) {
+                localStorage.setItem("currentUser", ("user" + i));
+                document.getElementById("output").innerHTML = "Welcome, " + JSON.parse(localStorage.getItem("user" + i)).fullname;
+                window.open("your-events.html", "_self");
+
+                return true;
+            } else {
+                document.getElementById("output").innerHTML = "Incorrect Password";
+                return false;
+            }
+        } else {
+            i++;
+        }
+    }
+    document.getElementById("output").innerHTML = "User does not exist";
     return false;
 }
 
@@ -130,21 +148,25 @@ function register() {
     var f = document.getElementById("registerForm");
 
     var newUser = document.getElementById("newUser").value;
-    var newPass = document.getElementById("newPass").value;
+    var newPass = encrypt(document.getElementById("newPass").value);
     var newName = document.getElementById("fullname").value;
-    var user = new User(newName, newUser, newPass);
-    var i = 0;
-    while (cookieExists("user" + i)) {
-        i++;
+    if (newUser != "" && newPass != "" && newName != "") {
+        var user = new User(newName, newUser, newPass);
+        var i = 0;
+        while (cookieExists("user" + i)) {
+            i++;
+        }
+        console.log(i);
+        setCookie("user" + i, JSON.stringify(user));
+        localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+        window.open("account-login.html", "_self");
+
+    } else {
+        if (newUser = "") {
+
+        }
     }
-    console.log(i);
-    setCookie("user" + i, JSON.stringify(user));
-    localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
-    // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-
-
-    //thisUser,thisPass.
-
 }
 
 class User {
@@ -154,6 +176,8 @@ class User {
         this.password = pass;
     }
 }
+
+
 
 /*
 lue;

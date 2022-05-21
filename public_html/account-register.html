@@ -90,12 +90,12 @@
 
     <!-- CONTENT -->
     <div class="register">
-        <div class="rtitle">Register</div>
+        <h1 class="rtitle">REGISTER</h1>
         <form id="registerForm">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input type="text" class="text-input" placeholder="Enter your name" id="fullname">
+                    <input type="text" class="text-input" placeholder="Enter your name" id="fullname" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Username</span>
@@ -103,45 +103,27 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" class="text-input" placeholder="Enter your email">
+                    <input type="text" class="text-input" placeholder="Enter your email" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input type="text" class="text-input" placeholder="Enter your phone number">
+                    <input type="text" class="text-input" placeholder="Enter your phone number" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="text" class="text-input" placeholder="Enter your password" id="newPass" required>
+                    <input type="text" class="text-input" placeholder="Enter your password" id="newPass" type="password" required>
                 </div>
 
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="text" class="text-input" placeholder="Confirm your password" required>
+                    <input type="text" class="text-input" placeholder="Confirm your password" type="password" required>
                 </div>
             </div>
-            <div class="gender-details">
-                <input type="radio" name="gender" id="dot-1">
-                <input type="radio" name="gender" id="dot-2">
-                <input type="radio" name="gender" id="dot-3">
-                <span class="gender-title">Gender</span>
-                <div class="category">
-                    <label for="dot-1">
-                            <span class="dot one"></span>
-                            <span class="gender">Male</span>
-                        </label>
-                    <label for="dot-2">
-                            <span class="dot two"></span>
-                            <span class="gender">Female</span>
-                        </label>
-                    <label for="dot-3">
-                            <span class="dot three"></span>
-                            <span class="gender">Prefer not to say</span>
-                        </label>
-                </div>
-            </div>
-            <div class="buTTon">
-                <a href="account-login.html"><input type="button" onclick="register()" value="Register"></a>
-            </div>
+
+
+            <!-- <button type="button" class="primary-btn" onclick="checkUserLS()">Sign In</button> -->
+            <input id='brokereg' class="secondary-btn" type="button" onclick="register()" value="Register">
+
     </div>
     </form>
     </div>
@@ -160,7 +142,8 @@
     </div>
 
     <!-- END CONTENT -->
-
+    <script src="js//libraries/md5.min.js"></script>
+    <script src="js/maybebackground.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="js/background.js"></script>
     <script async src="js/userSettings.js"></script>

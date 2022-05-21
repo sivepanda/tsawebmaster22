@@ -54,7 +54,7 @@ function resizeWindow() {
         isMobile = true;
         styles.setAttribute('href', mobstyles);
         changeElementIDDisplay("sitesettingspanel", "none");
-        document.getElementById("mainlogoind") ? document.getElementById("mainlogoind").style.opacity = "0" : console.log("not index");
+        // document.getElementById("mainlogoind") ? document.getElementById("mainlogoind").style.opacity = "0" : console.log("not index");
         document.getElementById("hamburger") ? document.getElementById("hamburger").style.display = 'block' : console.log('hamburger replaced');
         document.getElementById("navbar") ? document.getElementById("navbar").style.display = 'none' : console.log("navbar removed");
         document.getElementById("artistsec") ? document.getElementById("artistsec").style.display = 'none' : console.log("artistsec removed");
@@ -84,13 +84,20 @@ function toggleMenu() {
     // document.body.style.margin = '10vw';
 }
 
+function triggerHover() {
+    var telemetry = document.getElementsByClassName("telemetrycard");
+    for (let i = 0; i < telemetry.length; i++) {
+        telemetry[i].classList.toggle("hover");
+    }
+}
+
 if (isMobile) {
-    const headLogo = document.getElementById("mainlogoind");
+    // const headLogo = document.getElementById("mainlogoind");
     const ic1Logo = document.getElementById("ic1logo");
     const ic1h1 = document.getElementById("ic1h1");
     const ic3bp = document.getElementById("ic3bp");
     // var conversion = 80 / ic1Logo.offsetWidth;
-    headLogo ? headLogo.style.opacity = "1" : console.log("not index");
+    // headLogo ? headLogo.style.opacity = "1" : console.log("not index");
 
     window.addEventListener("scroll", function(e) {
         const head = document.getElementById("header");
@@ -108,26 +115,26 @@ if (isMobile) {
         } */
 
 
-        if (window.scrollY > 64) {
-            //nothing
-        } else if (window.scrollY == 0) {
-            ic1Logo ? ic1Logo.style.width = 80 + "vw" : console.log("not index");
-            ic1Logo ? ic1Logo.style.marginLeft = 10 + "vw" : console.log("not index");
-            var logoHeight = ic1logo ? ic1Logo.offsetHeight : 0;
-        } else {
-            var finalSize = 50;
-            var initialSize = 80;
-            var deltaSize = initialSize - finalSize;
-            var animationHeight = 64 / 2;
-            var logoSize = finalSize + Math.floor((deltaSize) / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight))));
-            ic1Logo ? ic1Logo.style.width = logoSize + "vw" : console.log("not index");
-            ic1Logo ? ic1Logo.style.opacity = (1 / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight)))) : console.log("not index");
-            ic1Logo ? ic1Logo.style.marginLeft = ((100 - logoSize) / 2) + "vw" : console.log("not index");
-            var logoHeight = ic1logo ? ic1Logo.offsetHeight : 0;
-            console.log("New margin " + (initialLogoHeight - logoHeight));
-            // console.log("Current marginTop: " + compStyle.marginTop);
-            ic1h1 ? ic1h1.style.marginTop = ((initialLogoHeight - logoHeight)) + "px" : console.log("not index");
-        }
+        // if (window.scrollY > 64) {
+        //     //nothing
+        // } else if (window.scrollY == 0) {
+        //     ic1Logo ? ic1Logo.style.width = 80 + "vw" : console.log("not index");
+        //     ic1Logo ? ic1Logo.style.marginLeft = 10 + "vw" : console.log("not index");
+        //     var logoHeight = ic1logo ? ic1Logo.offsetHeight : 0;
+        // } else {
+        //     var finalSize = 50;
+        //     var initialSize = 80;
+        //     var deltaSize = initialSize - finalSize;
+        //     var animationHeight = 64 / 2;
+        //     var logoSize = finalSize + Math.floor((deltaSize) / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight))));
+        //     ic1Logo ? ic1Logo.style.width = logoSize + "vw" : console.log("not index");
+        //     ic1Logo ? ic1Logo.style.opacity = (1 / (1 + Math.pow(Math.E, (0.1) * (window.scrollY - animationHeight)))) : console.log("not index");
+        //     ic1Logo ? ic1Logo.style.marginLeft = ((100 - logoSize) / 2) + "vw" : console.log("not index");
+        //     var logoHeight = ic1logo ? ic1Logo.offsetHeight : 0;
+        //     console.log("New margin " + (initialLogoHeight - logoHeight));
+        //     // console.log("Current marginTop: " + compStyle.marginTop);
+        //     ic1h1 ? ic1h1.style.marginTop = ((initialLogoHeight - logoHeight)) + "px" : console.log("not index");
+        // }
         if (window.scrollY > 560) {
             var square = document.getElementById('ic2');
             square.style.setProperty('--tele-anim', "75vw");

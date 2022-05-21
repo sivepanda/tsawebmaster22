@@ -8,15 +8,14 @@ function setSnap() {
     // scrollRail.classList.toggle("active");
     // scrollCircle.classList.toggle("active");
     setUserSetting("scrollsnap", 'scrollsnapping');
-    console.log("here");
 }
 
 function setScrollbar() {
     barCheckBox.classList.toggle("active");
-    console.log("there");
     setUserSetting("custscroll", "customscrollbar");
     location.reload();
 }
+
 
 function setUserSetting(elementId, cookieName) {
     if (isLoaded) {

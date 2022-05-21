@@ -96,18 +96,18 @@
                 <h1 id="output">Sign in</h1>
                 <form>
                     <div>
-                        <label class="mail">Email or username</label>
-                        <input type="text" class="text-input" id="user" />
+                        <label class="mail">Username</label>
+                        <input type="text" class="text-input" id="user" required autofocus/>
                     </div>
                     <div>
                         <label class="mail">Password</label>
-                        <input type="password" class="text-input" id="pass" />
+                        <input type="password" class="text-input" id="pass" required/>
                     </div>
                     <button type="button" class="primary-btn" onclick="checkUserLS()">Sign In</button>
                 </form>
-                <div class="links">
+                <!-- <div class="links">
                     <a href="#">Forgot Password</a>
-                </div>
+                </div> -->
                 <div class="or">
                     <hr class="bar">
                     <span>OR</span>
@@ -118,8 +118,7 @@
                 <footer id="main-footer">
                     <p>Copyright &copy; 2022, NuWrld All Rights Reserved</p>
                     <div>
-                        <a href="#">Terms Of Use</a>
-                        <a href="#">Privacy Policy</a>
+                        <a href="terms-and-conditions.html">Terms Of Use & Privacy Policy</a>
                     </div>
                 </footer>
             </div>
@@ -164,7 +163,9 @@
 
     </div>
 
+    <script src="js//libraries/md5.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="js/userdata.js"></script>
     <script src="js/background.js"></script>
     <script async src="js/userSettings.js"></script>
     <script src="js/loadelements.js"></script>

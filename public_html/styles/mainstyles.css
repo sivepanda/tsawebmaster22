@@ -369,11 +369,11 @@ label p {
 
 .biglink {
     margin-right: 200px;
-    transform: skew(30deg, 0deg);
+    /* transform: skew(30deg, 0deg); */
 }
 
 .contentbox .blcont {
-    transform: skew(-30deg, 0deg);
+    /* transform: skew(-30deg, 0deg); */
 }
 
 .contentbox .biglinkleft {
@@ -447,6 +447,8 @@ label p {
 }
 
 #ec2 {
+    border-radius: 25px;
+    margin-top: 5vh;
     display: grid;
     grid-template-columns: 50vw 50vw;
     background-size: cover;
@@ -454,12 +456,18 @@ label p {
     /* height: 20vh; */
     grid-template-rows: auto repeat(4, 10vh);
     -webkit-transition: background-image 400ms ease-in-out;
+    transition: 0.2s ease;
     /* padding-bottom: 10vh; */
+}
+
+#ec2:hover {
+    transition: 2s ease;
 }
 
 #ec2title {
     grid-column: 1 / span 2;
     grid-row: 1;
+    padding-left: 2vw;
 }
 
 #ec2 p {
@@ -757,10 +765,37 @@ body {
 }
 
 .attpara {
-    margin-left: 1vw;
-    margin-right: 1vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     color: white;
     font-size: 2vh;
+}
+
+.attpara p {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 3vh;
+}
+
+.attpara h2 {
+    font-size: 6vh;
+    color: white;
+}
+
+.attpara h3 {
+    font-size: 4vh;
+    color: white;
+    margin-bottom: 3vh;
+    padding-bottom: 0;
+}
+
+.attpara h4 {
+    font-family: 'Michroma', 'sans-serif';
+    font-weight: 50;
+    font-size: 3vh;
+    color: white;
+    margin-bottom: 3vh;
+    padding-bottom: 0;
 }
 
 .para {
@@ -1092,6 +1127,7 @@ input[type="submit"]:hover {
     z-index: 100;
     padding-bottom: 1rem;
     margin-top: 5vh;
+    max-height: 80vh;
 }
 
 #signin form {
@@ -1247,6 +1283,26 @@ input[type="submit"]:hover {
 }
 
 .secondary-btn {
+    padding: 3.7vh 3vw;
+    height: 4vh;
+    font-size: 3vh;
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.register .secondary-btn {
+    line-height: 0;
+}
+
+#signin .secondary-btn {
     padding: 0.7rem 1rem;
     height: 2rem;
     display: block;
@@ -1259,6 +1315,7 @@ input[type="submit"]:hover {
     cursor: pointer;
     text-align: center;
     transition: all 0.5s;
+    font-size: 2vh;
 }
 
 .secondary-btn:hover {
@@ -1310,9 +1367,16 @@ input[type="submit"]:hover {
 }
 
 .register .rtitle {
-    font-size: 25px;
+    font-size: 6vh;
     font-weight: 500;
     color: white;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Michroma', sans-serif;
+    color: rgba(0, 0, 0, 0);
+    font-weight: 100;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 
 .register .rtitle::before {
@@ -1341,6 +1405,10 @@ form .user-details .input-box {
     display: block;
     font-weight: 500;
     margin-bottom: 5px;
+}
+
+.details {
+    font-size: 2vh;
 }
 
 .user-details .input-box input {
@@ -1417,6 +1485,45 @@ form .buTTon input {
 
 form .buTTon input:hover {
     background: lightgreen;
+}
+
+#UserNm {
+    position: relative;
+    left: 5%;
+}
+
+#UserNm a {
+    position: relative;
+    font-size: 6vw;
+    color: black;
+    -webkit-text-stroke: 2px white;
+    text-transform: uppercase;
+}
+
+#UserNm a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -16%;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw white;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: whou 3s linear infinite;
+}
+
+@keyframes whou {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
 }
 
 
@@ -1511,11 +1618,20 @@ form .buTTon input:hover {
     margin-left: 3vw;
     position: relative;
     width: 30vw;
-    height: 650px;
+    height: 83vh;
     background: #0F0F0F;
     border-radius: 20px;
     overflow: hidden;
     align-items: center;
+}
+
+#ye1cc {
+    overflow-x: scroll;
+}
+
+#ye1cc .card27 {
+    height: 40vh;
+    min-width: 30vw;
 }
 
 .card27:hover {
@@ -1524,12 +1640,14 @@ form .buTTon input:hover {
     transition: ease 0.5s;
 }
 
-#advet:hover {
+#advet:hover,
+.advet:hover {
     background-color: var(--electric-blue-dark);
     box-shadow: 0px 0px 50px var(--electric-blue);
 }
 
-#vret:hover {
+#vret:hover,
+.vret:hover {
     background-color: var(--gold-dark);
     box-shadow: 0px 0px 50px var(--gold);
 }
@@ -1545,17 +1663,20 @@ form .buTTon input:hover {
     transition: 0.5s;
 }
 
-#basicet::before {
+#basicet::before,
+.basicet::before {
     background: #1a743c;
 }
 
-#advet::before {
+#advet::before,
+.advet::before {
     background-color: var(--electric-blue);
     /* background-image: linear-gradient(315deg, #979797 0%, #2e4863 40%); */
     transition: ease-in-out 0.5s;
 }
 
-#vret::before {
+#vret::before,
+.vret::before {
     background-color: var(--gold);
     /* background-image: linear-gradient(315deg, #d09d1f 0%, #6b4f09 40%); */
 }
@@ -1585,6 +1706,110 @@ form .buTTon input:hover {
     z-index: 1;
 }
 
+.plus {
+    z-index: 1000;
+    width: 10vw;
+    margin-top: 2.5vh;
+    margin-left: 4vw;
+    position: absolute;
+    /* position: relative; */
+    /* margin-top: -7vw; */
+    display: block;
+    width: 45px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 10;
+    /* margin-left: 92vw; */
+}
+
+.plus,
+.plus:before {
+    content: '';
+    display: block;
+    width: 180px;
+    height: 20px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.plus:before {
+    z-index: 1000;
+    background-color: white;
+    /* border-radius: 10px; */
+    transform: rotate(-90deg) translate(7px, 0px);
+}
+
+.card27:hover .plus,
+.card27:hover .plus:before {
+    background-color: var(--light-green);
+    width: 100px;
+    height: 10px;
+}
+
+#ye1cc .imgBx {
+    height: 40vh;
+    padding-top: 0vh;
+    margin-top: -2vh;
+}
+
+#ye1cc img {
+    position: relative;
+    max-height: 40vh;
+    transition: ease 0.3s;
+}
+
+#ye1cc .card27:hover .imgBx img {
+    /* position: fixed; */
+    opacity: 0.3;
+    transition: cubic-bezier(.75, -0.01, .01, .99) 0.5s;
+    max-height: 30vh;
+    /* margin-top: -8vh; */
+}
+
+#ye1cc .card27 .contentBx h3 {
+    font-size: 2.5vw;
+    padding-top: 0vh;
+    margin-top: -10vh;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease-in-out 0.2s;
+}
+
+#ye1cc .card27:hover .contentBx h3 {
+    /* position: fixed; */
+    margin-top: -50vh;
+    padding-bottom: 1vh;
+    transition: ease 0.5s;
+    color: #000;
+    text-shadow: 0 0 10px #FFF;
+    transition: ease-in-out 0.5s;
+}
+
+#ye1cc .card27 .price {
+    /* font-size: 0; */
+    font-size: 3vh;
+    /* margin-top: -40vh; */
+    color: white;
+    transition: ease 0.5s;
+}
+
+#ye1cc .card27:hover .price {
+    /* opacity: 1; */
+    height: auto;
+    /* margin-top: -90vh; */
+    line-height: 4vh;
+    color: white;
+    transition: ease 0.8s;
+}
+
 .card27 .imgBx img {
     max-width: 100%;
     transition: ease 0.3s;
@@ -1592,9 +1817,6 @@ form .buTTon input:hover {
 
 .card27:hover .imgBx img {
     transition: ease 0.5s;
-}
-
-.card27:hover .imgBx img {
     max-width: 50%;
 }
 
@@ -1609,8 +1831,8 @@ form .buTTon input:hover {
 }
 
 .card27 .contentBx h3 {
-    font-size: 40px;
-    margin-top: 100px;
+    font-size: 2.5vw;
+    /* margin-top: 2vh; */
     color: white;
     font-weight: 500;
     text-transform: uppercase;
@@ -1620,7 +1842,8 @@ form .buTTon input:hover {
 
 .card27 .contentBx .price {
     margin-top: 20px;
-    font-size: 15px;
+    font-size: 2vh;
+    line-height: 3vh;
     text-transform: none;
     color: white;
     font-weight: 300;
@@ -1630,13 +1853,13 @@ form .buTTon input:hover {
 }
 
 .card27:hover .contentBx .price {
-    margin-top: -40px;
+    margin-top: -5vh;
     color: white;
     transition: ease 0.8s;
 }
 
 #advet .contentBx .price {
-    font-size: 14px;
+    font-size: 2.2vh;
 }
 
 .card27 .contentBx #buy {
@@ -1655,12 +1878,13 @@ form .buTTon input:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.5s;
-    margin-left: 50%;
+    margin-left: -webkit-calc(15vw - 50px);
+    margin-left: calc(15vw - 50px);
     line-height: 25px;
 }
 
 .card27:hover .contentBx h3 {
-    margin-top: -30px;
+    margin-top: -6vh;
     transition: ease 0.5s;
     color: #000;
     text-shadow: 0 0 10px #FFF;
@@ -1670,6 +1894,17 @@ form .buTTon input:hover {
     top: 0;
     opacity: 1;
 }
+
+#ye1cc .card27 .contentBx #h327add {
+    font-size: 2vw;
+}
+
+#ye1cc .card27:hover .contentBx #h327add {
+    margin-top: -40vh;
+}
+
+
+/* booked event cards */
 
 
 /* button with glowing animation */
@@ -1746,7 +1981,7 @@ form .buTTon input:hover {
     text-decoration: none;
     font-family: sans-serif;
     box-sizing: border-box;
-    background: linear-gradient(90deg, #FFD400, #FFDD3c, #FFEA61, #FFF192, #FFF192, #FFEA61, #FFDD3c, #FFD400);
+    background: linear-gradient(90deg, #ac8f01, #998524, #8d8135, #FFF192, #948b53, #8f8337, #FFDD3c, #836d00);
     /* light green : var(--light-green) */
     /* dark green : var(--dark-green) */
     background-size: 400%;
@@ -2158,8 +2393,8 @@ form .buTTon input:hover {
 
 .telemetrycardcontainer .telemetrycard {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 17vw;
+    height: 50vh;
     background: #949494;
     display: flex;
     justify-content: center;
@@ -2171,6 +2406,11 @@ form .buTTon input:hover {
     animation-name: animate9;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+}
+
+.telemetrycard h3 {
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+    font-weight: 800;
 }
 
 .telemetrycard::before {
@@ -2187,7 +2427,8 @@ form .buTTon input:hover {
 
 #ic2cc1::before,
 #ic3cc1::before {
-    left: 148px;
+    left: -webkit-calc(17vw / 2 - 2px);
+    left: calc(17vw / 2 - 2px);
 }
 
 #ic2cc1:hover::before,
@@ -2197,7 +2438,8 @@ form .buTTon input:hover {
 
 #ic2cc2::before,
 #ic3cc2::before {
-    left: 75px;
+    left: -webkit-calc(17vw / 4 - 2px);
+    left: calc(17vw / 4 - 2px);
 }
 
 #ic2cc2:hover::before,
@@ -2217,8 +2459,9 @@ form .buTTon input:hover {
 
 .telemetrycardcontainer .telemetrycard .telemetrycontent h2 {
     position: absolute;
-    right: 30px;
-    font-size: 4em;
+    right: -webkit-calc(17vw / 6 - 2px);
+    right: calc(17vw / 8 - 2px);
+    font-size: 3.5vw;
     font-weight: 800;
     color: var(--light-green);
     z-index: 1;
@@ -2228,14 +2471,14 @@ form .buTTon input:hover {
 
 .telemetrycardcontainer .telemetrycard:hover .telemetrycontent h2 {
     opacity: 1;
-    transform: translateY(-145px);
+    transform: translateY(-15vh);
 }
 
 .telemetrycardcontainer .telemetrycard .telemetrycontent h3 {
     position: relative;
     text-align: center;
     top: 10px;
-    font-size: 1.5em;
+    font-size: 1.3vw;
     color: #fff;
     z-index: 2;
     opacity: 1;
@@ -2249,9 +2492,10 @@ form .buTTon input:hover {
 }
 
 .telemetrycardcontainer .telemetrycard .telemetrycontent p {
+    background-color: #00000098;
     position: relative;
     padding: 20px;
-    font-size: 17px;
+    font-size: 1vw;
     color: #fff;
     z-index: 0;
     opacity: 0.1;
