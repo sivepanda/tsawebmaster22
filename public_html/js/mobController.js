@@ -66,6 +66,8 @@ function resizeWindow() {
         document.getElementById("skeu") ? document.getElementById("skeu").style.display = 'none' : console.log("skeu removed");
         document.getElementById("ic1btn") ? document.getElementById("ic1btn").style.display = 'none' : console.log("skeu removed");
         document.getElementById("ic1logo") ? document.getElementById("ic1logo").style.display = '' : console.log("ic1logo replaced");
+        window.scrollTo(0, 0);
+
     }
 }
 
