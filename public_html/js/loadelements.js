@@ -107,7 +107,6 @@ function loaded() {
         load.remove();
         window.clearTimeout(loadInterval);
         console.log('Page loaded successfully');
-        window.scrollTo(0, 0);
         if (width > height) {
             document.body.addEventListener('scroll', function(e) {
                 var progressbar = document.getElementById('progressbar');

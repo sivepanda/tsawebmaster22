@@ -356,7 +356,7 @@ label p {
 
 #faqtext {
     -webkit-text-stroke: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: white;
     color: rgba(0, 0, 0, 0);
     /* margin-left: 150px; */
 }
@@ -379,14 +379,14 @@ label p {
 .contentbox .biglinkleft {
     grid-column: 1;
     transition: ease-in-out 400ms;
-    background-color: black;
+    /* background-color: black; */
     grid-row: 1;
 }
 
 .contentbox .biglinkright {
     grid-column: 2;
     grid-row: 1;
-    background-color: white;
+    /* background-color: white; */
     transition: ease-in-out 400ms;
 }
 
@@ -517,7 +517,7 @@ label p {
 
 #ac2 {
     height: 40vh;
-    /*background-image: url("../resources/images/laser-light-ga4f07054a_1920.jpg");*/
+    background-image: url("../resources/images/party-gb89609f5d_1920.jpg");
     /*background-color: black;*/
     background-size: cover;
     background-position: center;
