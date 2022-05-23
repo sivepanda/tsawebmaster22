@@ -2628,6 +2628,52 @@ form .buTTon input {
     min-height: 85vh;
 }
 
+#leftartimg {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 0vw;
+    background-image: url("../resources/images/man-gee2c27e0b_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 30vh;
+    margin-top: 10vh;
+    padding-top: 0vh;
+}
+
+#rightarttxt {
+    /* position: fixed; */
+    width: 100vw;
+    margin-left: 0;
+    height: 85vh;
+    /* margin-top: -3vh; */
+    padding: 0vh;
+    padding-left: 1vw;
+    margin: 0vh;
+}
+
+#rightarttxt h1,
+#leftartimg h1 {
+    font-family: 'Michroma', sans-serif;
+    font-size: 5vh;
+    color: white;
+    display: block;
+    margin-top: auto;
+    text-align: center;
+}
+
+#leftartimg h1 {
+    font-size: 8vw;
+    text-transform: capitalize;
+}
+
+#rightarttxt p {
+    font-size: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    color: white;
+}
+
 @keyframes animate {
     0% {
         background-position: 0%;
