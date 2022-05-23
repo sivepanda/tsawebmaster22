@@ -1302,6 +1302,12 @@ input[type="submit"]:hover {
     line-height: 0;
 }
 
+#error {
+    display: none;
+    padding-left: 0.5vw;
+    background-color: red;
+}
+
 #signin .secondary-btn {
     padding: 0.7rem 1rem;
     height: 2rem;
@@ -1425,7 +1431,7 @@ form .user-details .input-box {
 
 .user-details .input-box input:focus,
 .user-details .input-box input:valid {
-    border-color: #9b59b6;
+    border-color: var(--indicator-color-active);
 }
 
 form .gender-details .gender-title {

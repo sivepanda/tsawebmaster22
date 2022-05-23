@@ -11,12 +11,18 @@ function addEvent(time, date, tier, vr) {
 
 function placeEvents() {
     let str = "";
+    let currentUser = localStorage.getItem("currentUser");
     let i = 0;
     while (localStorage.getItem("event" + i) != null && i < 20) {
-        curr = JSON.parse(localStorage.getItem("event" + i));
-        img = curr.tier == 'basicet' ? 'novis' : curr.tier == 'advet' ? 'novis_adv' : 'novis_vr';
-        tier = curr.tier == 'basicet' ? 'Basic' : curr.tier == 'advet' ? 'Advanced' : 'VR';
-        str += '<div class="card27  ' + curr.tier + '">  <div class="imgBx"> <img src="resources/images/' + img + '.png">' + '</div> <div class="contentBx">' + '<h3>' + curr.date + '</h3>' + '<p class="price">Tier: ' + tier + '<br>' + 'VR Option: ' + curr.vroption + '<br>' + '</p> </div> </div>';
+        var x = JSON.parse(localStorage.getItem("event" + i)).user;
+        if (JSON.parse(localStorage.getItem("event" + i)).user == currentUser) {
+            curr = JSON.parse(localStorage.getItem("event" + i));
+            img = curr.tier == 'basicet' ? 'novis' : curr.tier == 'advet' ? 'novis_adv' : 'novis_vr';
+            tier = curr.tier == 'basicet' ? 'Basic' : curr.tier == 'advet' ? 'Advanced' : 'VR';
+            str += '<div class="card27  ' + curr.tier + '">  <div class="imgBx"> <img src="resources/images/' + img + '.png">' +
+                '</div> <div class="contentBx">' + '<h3>' + curr.date + '</h3>' + '<p class="price"> Time: ' + curr.time + '<br>Tier: ' + tier + '<br>' + 'VR Option: ' +
+                curr.vroption + '<br>' + '</p> </div> </div>';
+        }
         i++;
     }
     document.getElementById("ye1cc").innerHTML += str;

@@ -2218,6 +2218,10 @@ input[type="submit"]:hover {
     transition: ease 0.8s;
 }
 
+#error {
+    display: none;
+}
+
 #ye1cc .card27 .contentBx #h327add {
     font-size: 2vw;
 }
