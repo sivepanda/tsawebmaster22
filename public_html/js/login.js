@@ -149,22 +149,37 @@ function register() {
 
     var newUser = document.getElementById("newUser").value;
     var newPass = encrypt(document.getElementById("newPass").value);
+    var newPassCheck = encrypt(document.getElementById("newPassCheck").value);
     var newName = document.getElementById("fullname").value;
-    if (newUser != "" && newPass != "" && newName != "") {
+    var userExists = false;
+    if (newUser != "" && newPass != "" && newPass == newPassCheck && newName != "") {
         var user = new User(newName, newUser, newPass);
         var i = 0;
         while (cookieExists("user" + i)) {
+            if (newUser == JSON.parse(localStorage.getItem("user" + i)).username) {
+                userExists = true;
+                break;
+            }
             i++;
         }
-        console.log(i);
-        setCookie("user" + i, JSON.stringify(user));
-        localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
-        // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-        window.open("account-login.html", "_self");
-
+        if (userExists) {
+            document.getElementById("error").style.display = "block";
+            document.getElementById("error").innerHTML = "Username is taken.";
+        } else {
+            console.log(i);
+            setCookie("user" + i, JSON.stringify(user));
+            localStorage.setItem("user" + i.toString(), JSON.stringify(user)); //alternative to cookies that are not persistent after browser close for testing
+            // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+            window.open("account-login.html", "_self");
+        }
     } else {
-        if (newUser = "") {
-
+        document.getElementById("error").style.display = "block";
+        if (newUser == "") {
+            document.getElementById("error").innerHTML = "Please enter a username.";
+        } else if (newPass == "" || newPassCheck == "") {
+            document.getElementById("error").innerHTML = "Please enter a password.";
+        } else if (newPass != newPassCheck) {
+            document.getElementById("error").innerHTML = "Passwords do not match.";
         }
     }
 }

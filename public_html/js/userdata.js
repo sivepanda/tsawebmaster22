@@ -78,6 +78,7 @@ function addBookedEvent() {
     // document.getElementById("herberg").innerHTML = JSON.stringify(eventNew);
 
     localStorage.setItem(("event" + i), JSON.stringify(eventNew));
+    localStorage.setItem(("vr"), "");
 }
 
 // onclick=\"setTier()\"
