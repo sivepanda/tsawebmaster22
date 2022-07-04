@@ -42,7 +42,7 @@ jobs:
           # ftp server
           server: files.000webhost.com
           # ftp username
-          username: nuwrld
+          username: nuwrld0
           # ftp password
           password: ${{ secrets.FTP_PASS }}
           # Server port to connect to (read your web hosts docs)
